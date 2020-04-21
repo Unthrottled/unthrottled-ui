@@ -5,8 +5,7 @@
       <input type="text" v-model="userInput" />
     </label>
     <Ravioli :ravioli="userInput" @formuoli="updateImage" />
-    <h3>{{ displayGril.toUpperCase() }}</h3>
-    <h3>Current Waifu: {{ currentWaifu }}</h3>
+    <h3>Current Waifu: {{ displayGril }}</h3>
     <h3 style="color: red" v-if="displayGril === 'ryuko'">Best Waifu</h3>
     <div :style="{ backgroundImage: gril() }" class="fam"></div>
   </div>
@@ -35,12 +34,13 @@ import { Component, Watch } from "vue-property-decorator";
 import Ravioli from "@/components/Ravioli.vue";
 import { Wafius } from "@/store/modules/waifu";
 import { namespace } from "vuex-class";
+import capitalize from "lodash/capitalize";
 
-const Waifu = namespace("Waifu");
+const Waifu = namespace("WaifuModule");
 
 const grils = [
-  Wafius.MIKU,
   Wafius.RYUKO,
+  Wafius.MIKU,
   Wafius.SATSUKI,
   Wafius.MEGUMIN,
   Wafius.REM,
@@ -59,16 +59,24 @@ export default class Fam extends Vue {
   private currentGril = 0;
   private vewyCheeky = false;
 
+  @Waifu.Action
+  public updateWaifu!: (newWaifu: Wafius) => void;
+
+  mounted() {
+    this.currentGril = grils.indexOf(this.currentWaifu);
+  }
+
   get displayGril(): string {
-    return grils[this.currentGril];
+    return capitalize(this.currentWaifu.split("_")[0]);
   }
 
   gril(): string {
-    return `url("https://doki.assets.unthrottled.io/backgrounds/${this.displayGril}.png")`;
+    return `url("https://doki.assets.unthrottled.io/backgrounds/${this.currentWaifu}.png")`;
   }
 
   updateImage() {
     this.currentGril = (this.currentGril + 1) % grils.length;
+    this.updateWaifu(grils[this.currentGril]);
   }
 
   @Watch("userInput")
