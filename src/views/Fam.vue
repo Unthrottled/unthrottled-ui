@@ -6,7 +6,7 @@
     </label>
     <Ravioli :ravioli="userInput" @formuoli="updateImage" />
     <h3>Current Waifu: {{ displayGril }}</h3>
-    <h3 style="color: red" v-if="displayGril === 'ryuko'">Best Waifu</h3>
+    <h3 style="color: red" v-if="displayGril === 'Ryuko'">Best Waifu</h3>
     <div :style="{ backgroundImage: gril() }" class="fam"></div>
   </div>
 </template>
@@ -36,16 +36,16 @@ import { Wafius } from "@/store/modules/waifu";
 import { namespace } from "vuex-class";
 import capitalize from "lodash/capitalize";
 
-const Waifu = namespace("WaifuModule");
+const Waifu = namespace("waifu");
 
 const grils = [
   Wafius.RYUKO,
   Wafius.MIKU,
-  Wafius.SATSUKI,
-  Wafius.MEGUMIN,
   Wafius.REM,
   Wafius.IBUKI,
   Wafius.EMILIA_LIGHT,
+  Wafius.SATSUKI,
+  Wafius.MEGUMIN,
   Wafius.EMILIA_DARK
 ];
 
@@ -59,8 +59,8 @@ export default class Fam extends Vue {
   private currentGril = 0;
   private vewyCheeky = false;
 
-  @Waifu.Action
-  public updateWaifu!: (newWaifu: Wafius) => void;
+  @Waifu.Mutation
+  public setWaifu!: (newWaifu: Wafius) => void;
 
   mounted() {
     this.currentGril = grils.indexOf(this.currentWaifu);
@@ -76,7 +76,7 @@ export default class Fam extends Vue {
 
   updateImage() {
     this.currentGril = (this.currentGril + 1) % grils.length;
-    this.updateWaifu(grils[this.currentGril]);
+    this.setWaifu(grils[this.currentGril]);
   }
 
   @Watch("userInput")

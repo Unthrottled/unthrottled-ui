@@ -12,7 +12,7 @@ export enum Wafius {
   EMILIA_DARK = "emilia_dark"
 }
 
-@Module({ namespaced: true, store, dynamic: true, name: "WaifuModule" })
+@Module({ namespaced: true, name: "waifu" })
 export default class Waifu extends VuexModule {
   public currentWaifu: Wafius = Wafius.RYUKO;
   @Mutation
