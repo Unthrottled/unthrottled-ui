@@ -1,5 +1,4 @@
 import { Action, Module, Mutation, VuexModule } from "vuex-module-decorators";
-import store from "@/store";
 
 export enum Wafius {
   MIKU = "miku",
@@ -15,10 +14,12 @@ export enum Wafius {
 @Module({ namespaced: true, name: "waifu" })
 export default class Waifu extends VuexModule {
   public currentWaifu: Wafius = Wafius.RYUKO;
+
   @Mutation
   public setWaifu(newWaifu: Wafius): void {
     this.currentWaifu = newWaifu;
   }
+
   @Action
   public updateWaifu(newWaifu: Wafius): void {
     this.context.commit("setWaifu", newWaifu);

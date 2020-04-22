@@ -1,22 +1,22 @@
 <template>
-  <div class="fam-container">
+  <div class="waifu-container">
     <h2 style="color: #2c3e50" v-if="vewyCheeky">Vewy Cheeky</h2>
-    <label>
+    <label style="display: none">
       <input type="text" v-model="userInput" />
     </label>
-    <Ravioli :ravioli="userInput" @formuoli="updateImage" />
+    <button v-on:click="updateImage">Next Wafiu</button>
     <h3>Current Waifu: {{ displayGril }}</h3>
-    <h3 style="color: red" v-if="displayGril === 'Ryuko'">Best Waifu</h3>
-    <div :style="{ backgroundImage: gril() }" class="fam"></div>
+    <h3 style="color: red" v-if="displayGril === 'Ryuko'">Best Girl</h3>
+    <div :style="{ backgroundImage: gril() }" class="waifu"></div>
   </div>
 </template>
 
 <style scoped>
-.fam-container {
+.waifu-container {
   height: 100%;
 }
 
-.fam {
+.waifu {
   background-size: cover;
   content: "";
   z-index: 99999;
@@ -31,7 +31,6 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Watch } from "vue-property-decorator";
-import Ravioli from "@/components/Ravioli.vue";
 import { Wafius } from "@/store/modules/waifu";
 import { namespace } from "vuex-class";
 import capitalize from "lodash/capitalize";
@@ -49,25 +48,22 @@ const grils = [
   Wafius.EMILIA_DARK
 ];
 
-@Component({
-  components: { Ravioli }
-})
+@Component
 export default class Fam extends Vue {
   userInput = "";
   @Waifu.State
   public currentWaifu!: Wafius;
+  @Waifu.Mutation
+  public setWaifu!: (newWaifu: Wafius) => void;
   private currentGril = 0;
   private vewyCheeky = false;
 
-  @Waifu.Mutation
-  public setWaifu!: (newWaifu: Wafius) => void;
+  get displayGril(): string {
+    return capitalize(this.currentWaifu.split("_")[0]);
+  }
 
   mounted() {
     this.currentGril = grils.indexOf(this.currentWaifu);
-  }
-
-  get displayGril(): string {
-    return capitalize(this.currentWaifu.split("_")[0]);
   }
 
   gril(): string {
