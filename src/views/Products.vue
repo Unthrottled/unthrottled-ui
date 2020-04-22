@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <Banner />
+    <transition enter-class="fade-enter">
+      <h1>Products!</h1>
+    </transition>
   </div>
 </template>
 
@@ -15,14 +17,8 @@
 </style>
 
 <script>
-import Banner from "@/components/Banner";
-import Component from "vue-class-component";
-import Vue from "vue";
-
-@Component({
-  components: {
-    Banner: Banner
-  }
-})
-export default class Home extends Vue {}
+export default {
+  name: "Home",
+  components: {}
+};
 </script>
