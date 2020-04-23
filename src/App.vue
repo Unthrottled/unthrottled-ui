@@ -1,15 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/products">Products</router-link> |
-      <router-link to="/services">Services</router-link> |
-      <router-link to="/more">More</router-link> |
-      <router-link to="/waifus">Waifus</router-link>
+  <div>
+    <div class="navContainer">
+      <div id="nav">
+        <div>
+          Unthrottled
+        </div>
+        <span style="flex-grow: 0.5" />
+        <div class="navLinks">
+          <router-link to="/">Home</router-link>
+          <router-link to="/products">Products</router-link>
+          <router-link to="/services">Services</router-link>
+          <router-link to="/more">More</router-link>
+          <router-link to="/waifus">Waifus</router-link>
+        </div>
+      </div>
     </div>
-    <transition name="slide-fade" mode="out-in">
-      <router-view />
-    </transition>
+    <div id="app">
+      <transition name="slide-fade" mode="out-in">
+        <router-view />
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -20,29 +30,45 @@ html {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #2b3238;
+  color: #e6e6e6;
 }
 
 body {
   height: 100%;
+  margin: 0;
 }
 
 #app {
+  margin: auto;
   text-align: center;
   height: 100%;
   max-width: 980px;
 }
 
 #nav {
-  padding: 30px;
+  padding: 1rem;
+  display: flex;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #e6e6e6;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #a73035;
     }
   }
 }
+.navLinks {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.navContainer {
+  background: #262b30;
+  box-shadow: 0 -1px 2px 2px rgba(185, 32, 47, 0.27);
+}
+
 .slide-fade-enter-active {
   transition: all 0.2s ease;
 }
