@@ -33,6 +33,7 @@ export default class Banner extends Vue {
   margin-top: 5rem;
   font-size: 5rem;
   font-weight: 700;
+  color: #fff;
 }
 @keyframes fadeInUp {
   from {
