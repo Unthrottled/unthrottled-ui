@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <transition name="fadeInUp" v-on:after-enter="onAnimate">
-      <div v-if="isMounted">
+      <div v-if="brandAnimationStarted">
         <div class="hero-headline">
           Define your<br />
           own limits.
@@ -16,18 +16,24 @@ import Component from "vue-class-component";
 import Vue from "vue";
 import Layout from "@/components/Layout.vue";
 import { Prop } from "vue-property-decorator";
+import { namespace } from "vuex-class";
+
+const Animations = namespace("animations");
 @Component({
   components: { Layout }
 })
 export default class Banner extends Vue {
-  private isMounted = false;
+  @Animations.State
+  private brandAnimationStarted!: boolean;
+  @Animations.Mutation
+  private setBrandAnimationStarted!: (value: boolean) => void;
 
   @Prop()
   private onAnimate!: () => void;
 
   mounted() {
     setTimeout(() => {
-      this.isMounted = true;
+      this.setBrandAnimationStarted(true);
     }, 750);
   }
 }

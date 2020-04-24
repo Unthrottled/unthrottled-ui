@@ -9,7 +9,7 @@
           and demand excellence.
         </h1>
       </transition>
-      <transition appear name="fade" v-on:after-enter="setClosingLineShown">
+      <transition appear name="fade" v-on:after-enter="triggerClosingLineShown">
         <h1 class="excerpt" v-if="exceptShown">
           Deliver amazing value.
         </h1>
@@ -62,6 +62,9 @@ import Banner from "@/components/Banner.vue";
 import Component from "vue-class-component";
 import Vue from "vue";
 import Layout from "@/components/Layout.vue";
+import { namespace } from "vuex-class";
+
+const Animations = namespace("animations");
 
 @Component({
   components: {
@@ -70,19 +73,28 @@ import Layout from "@/components/Layout.vue";
   }
 })
 export default class Home extends Vue {
-  private bannerDisplayed = false;
-  private exceptShown = false;
-  private closingLineShown = false;
+  @Animations.State
+  private bannerDisplayed!: boolean;
+  @Animations.Mutation
+  private setBannerDisplayed!: (value: boolean) => void;
+  @Animations.State
+  private exceptShown!: boolean;
+  @Animations.Mutation
+  private setExceptShown!: (value: boolean) => void;
+  @Animations.State
+  private closingLineShown!: boolean;
+  @Animations.Mutation
+  private setClosingLineShown!: (value: boolean) => void;
 
   private excerptShown() {
-    setTimeout(() => (this.exceptShown = true), 1000);
+    setTimeout(() => this.setExceptShown(true), 1000);
   }
-  private setClosingLineShown() {
-    setTimeout(() => (this.closingLineShown = true), 500);
+  private triggerClosingLineShown() {
+    setTimeout(() => this.setClosingLineShown(true), 500);
   }
 
   private onBannerDisplay() {
-    setTimeout(() => (this.bannerDisplayed = true), 250);
+    setTimeout(() => this.setBannerDisplayed(true), 250);
   }
 }
 </script>
