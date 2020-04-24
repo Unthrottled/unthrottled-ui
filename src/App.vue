@@ -31,7 +31,8 @@ body {
 }
 
 #backgroundImage {
-  position: absolute;
+  position: fixed;
+  z-index: -1;
 }
 
 #app {
@@ -60,15 +61,19 @@ import { Component } from "vue-property-decorator";
   components: { Navigation }
 })
 export default class App extends Vue {
-  private backgroundWidth = 69;
-  private backgroundHeight = 69;
+  private backgroundWidth = 500;
+  private backgroundHeight = 500;
 
   mounted() {
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize);
     });
+    this.performBackgroundUpdate();
+  }
+
+  private performBackgroundUpdate() {
     this.updateSize();
-    this.drawBackground();
+    this.$nextTick(() => this.drawBackground());
   }
 
   private updateSize() {
@@ -84,19 +89,15 @@ export default class App extends Vue {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const backgroundCanvas: any = document.getElementById("backgroundImage")!!;
     const ctx: CanvasRenderingContext2D = backgroundCanvas.getContext("2d")!!;
-    console.log("drawing", this.backgroundWidth, this.backgroundHeight);
-    ctx.clearRect(0, 0, this.backgroundWidth, this.backgroundHeight);
+    const w = this.backgroundWidth;
+    const h = this.backgroundHeight;
+    ctx.clearRect(0, 0, w, h);
     ctx.beginPath();
-    ctx.moveTo(0, this.backgroundHeight);
-    ctx.quadraticCurveTo(
-      this.backgroundWidth / 1.5,
-      this.backgroundHeight,
-      this.backgroundWidth,
-      0
-    );
-    ctx.lineTo(this.backgroundWidth, this.backgroundHeight);
-    ctx.fillStyle = "#262c32";
-    ctx.strokeStyle = "#262c32";
+    ctx.moveTo(0, h);
+    ctx.quadraticCurveTo(w / 2, h, w, 0);
+    ctx.lineTo(w, h);
+    ctx.fillStyle = "#282f35";
+    ctx.strokeStyle = "#282F35";
     ctx.fill();
     ctx.closePath();
     ctx.stroke();
@@ -107,8 +108,7 @@ export default class App extends Vue {
   }
 
   onResize() {
-    this.updateSize();
-    this.drawBackground();
+    this.performBackgroundUpdate();
   }
 }
 </script>
