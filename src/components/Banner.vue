@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <transition name="fadeInUp">
+    <transition name="fadeInUp" v-on:after-enter="onAnimate">
       <div v-if="isMounted">
         <div class="hero-headline">
           Define your<br />
@@ -15,14 +15,20 @@
 import Component from "vue-class-component";
 import Vue from "vue";
 import Layout from "@/components/Layout.vue";
+import { Prop } from "vue-property-decorator";
 @Component({
   components: { Layout }
 })
 export default class Banner extends Vue {
   private isMounted = false;
 
+  @Prop()
+  private onAnimate!: () => void;
+
   mounted() {
-    setTimeout(() => (this.isMounted = true), 750);
+    setTimeout(() => {
+      this.isMounted = true;
+    }, 750);
   }
 }
 </script>
