@@ -75,6 +75,15 @@
           ability. Knowing that you can
           <span class="highlight">rest easy</span> when you really need to.
         </p>
+        <p class="productTagline">
+          See what SOGoS can do for you:<br />
+          <a
+            href="https://sogos.unthrottled.io/about"
+            target="_blank"
+            class="productLink"
+            >https://sogos.unthrottled.io/about</a
+          >
+        </p>
       </div>
     </div>
   </Layout>
@@ -89,6 +98,11 @@
 .highlight {
   color: #fff;
   font-weight: 500;
+}
+
+.productLink {
+  text-decoration: none;
+  color: #e8ad4f;
 }
 
 .productTagline {
