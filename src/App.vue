@@ -86,16 +86,19 @@ export default class App extends Vue {
   }
 
   private drawBackground() {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const backgroundCanvas: any = document.getElementById("backgroundImage")!!;
-    const ctx: CanvasRenderingContext2D = backgroundCanvas.getContext("2d")!!;
+    const backgroundCanvas = document.getElementById(
+      "backgroundImage"
+    ) as HTMLCanvasElement;
+    const ctx = backgroundCanvas.getContext("2d");
+    if (!ctx) return;
     const w = this.backgroundWidth;
     const h = this.backgroundHeight;
     ctx.clearRect(0, 0, w, h);
     ctx.beginPath();
-    ctx.moveTo(0, h);
-    ctx.quadraticCurveTo(w / 2, h, w, 0);
+    ctx.moveTo(0, h * 0.85);
+    ctx.quadraticCurveTo(w / 1.85, h, w, 0);
     ctx.lineTo(w, h);
+    ctx.lineTo(0, h);
     ctx.fillStyle = "#282f35";
     ctx.strokeStyle = "#282F35";
     ctx.fill();
