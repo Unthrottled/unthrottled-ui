@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layoutContainer">
     <slot></slot>
   </div>
 </template>
@@ -12,4 +12,8 @@ import Vue from "vue";
 export default class Layout extends Vue {}
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.layoutContainer {
+  padding-top: 1rem;
+}
+</style>

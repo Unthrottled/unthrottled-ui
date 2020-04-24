@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <div class="home">
+      <span style="opacity: 0">and his name is John Cena!</span>
       <Banner />
     </div>
   </Layout>
