@@ -1,9 +1,11 @@
 <template>
-  <div class="home">
-    <transition enter-class="fade-enter">
-      <h1>More!</h1>
-    </transition>
-  </div>
+  <Layout>
+    <div class="home">
+      <transition enter-class="fade-enter">
+        <h1>More!</h1>
+      </transition>
+    </div>
+  </Layout>
 </template>
 
 <style lang="scss">
@@ -17,8 +19,9 @@
 </style>
 
 <script>
+import Layout from "../components/Layout";
 export default {
   name: "Home",
-  components: {}
+  components: { Layout }
 };
 </script>

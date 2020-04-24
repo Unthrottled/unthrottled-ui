@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Layout>
     <transition name="fadeInUp">
       <div v-if="isMounted">
         <div class="hero-headline">
@@ -8,13 +8,16 @@
         </div>
       </div>
     </transition>
-  </div>
+  </Layout>
 </template>
 
 <script lang="ts">
 import Component from "vue-class-component";
 import Vue from "vue";
-@Component
+import Layout from "@/components/Layout.vue";
+@Component({
+  components: { Layout }
+})
 export default class Banner extends Vue {
   private isMounted = false;
 
@@ -30,7 +33,7 @@ export default class Banner extends Vue {
   font-weight: 700;
 }
 .hero-headline {
-  padding-top: 5rem;
+  /*padding-top: 5rem;*/
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
@@ -50,7 +53,6 @@ export default class Banner extends Vue {
   from {
     transform: translate3d(0, 40px, 0);
   }
-
   to {
     transform: translate3d(0, 0, 0);
     opacity: 1;
