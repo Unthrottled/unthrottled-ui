@@ -30,7 +30,7 @@ export default class Banner extends Vue {
   font-weight: 700;
 }
 .hero-headline {
-  margin-top: 5rem;
+  padding-top: 5rem;
   font-size: 5rem;
   font-weight: 700;
   color: #fff;

@@ -1,10 +1,12 @@
 <template>
-  <div>
+  <div class="iAmRoot">
     <Navigation />
-    <div id="app">
-      <transition mode="out-in" name="component-fade">
-        <router-view />
-      </transition>
+    <div class="main">
+      <div id="app">
+        <transition mode="out-in" name="component-fade">
+          <router-view />
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -13,6 +15,13 @@
 body {
   height: 100%;
   margin: 0;
+}
+
+.iAmRoot {
+  height: 100%;
+}
+
+.main {
 }
 
 #app {
