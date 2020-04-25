@@ -85,11 +85,64 @@
           >
         </p>
       </div>
+      <hr class="productSeparator" />
+      <div>
+        <div>
+          <h1 class="developerResourcesHeading">Developer Resources</h1>
+        </div>
+
+        <div>
+          <div>
+            <svg
+              id="SVGRoot"
+              width="205.24"
+              height="224.06"
+              version="1.1"
+              viewBox="0 0 410.47 448.12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g transform="translate(114.18 407.13)">
+                <path
+                  d="m283.27-294.09c14.434 25 14.434 197.06 0 222.05-14.434 24.997-163.45 111.03-192.31 111.03-28.867 0-177.88-86.03-192.31-111.03-14.434-25-14.434-197.06 0-222.05 14.434-25 163.45-111.03 192.31-111.03 28.867 0 177.88 86.03 192.31 111.03z"
+                  fill="#1D1E45"
+                  stroke-width=".94336"
+                  opacity="0.5"
+                  style="paint-order:stroke fill markers"
+                />
+                <path
+                  d="m92.792-247.73c6.5494-3.598 28.632-18.154 60.897-25.522 74.389-16.987 102.98 65.032 59.119 126.88-39.188 45-79.865 65.672-120.02 92.298-40.15-26.626-80.827-47.298-120.02-92.298-43.865-61.845-15.27-143.86 59.119-126.88 32.265 7.3677 54.347 21.924 60.897 25.522"
+                  fill="#fff"
+                  fill-opacity="1"
+                  stroke="#010101"
+                  stroke-dasharray="81.90215273, 40.95107626, 20.47553813, 40.95107626"
+                  stroke-linecap="round"
+                  stroke-miterlimit="6"
+                  stroke-width="20.476"
+                  style="paint-order:stroke fill markers"
+                />
+                <path
+                  d="m92.961-213.27c3.9352-2.1619 17.203-10.908 36.59-15.335 44.696-10.206 61.878 39.075 35.521 76.235-23.546 27.038-47.987 39.459-72.111 55.457-24.124-15.998-48.565-28.419-72.111-55.457-26.356-37.16-9.175-86.441 35.521-76.235 19.386 4.4269 32.655 13.173 36.59 15.335"
+                  fill="#7bd4f4"
+                  fill-opacity=".99"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-width="12.998"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </Layout>
 </template>
 
 <style lang="scss">
+.developerResourcesHeading {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
 .products {
   margin: auto;
   max-width: 550px;
@@ -98,6 +151,12 @@
 .highlight {
   color: #fff;
   font-weight: 500;
+}
+
+.productSeparator {
+  opacity: 0.1;
+  margin: 5rem 0;
+  color: #262b30;
 }
 
 .productLink {
