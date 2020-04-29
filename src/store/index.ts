@@ -7,12 +7,17 @@ import Animations from "@/store/modules/animations";
 
 Vue.use(Vuex);
 
+interface StoreState {
+  waifu: Waifu;
+  animations: Animations;
+}
+
 const persist = new VuexPersistence({
   storage: window.localStorage,
-  reducer: state => omit<any>(state, ["animations"])
+  reducer: (state: StoreState) => omit(state, ["animations"])
 });
 
-const store = new Vuex.Store({
+const store = new Vuex.Store<StoreState>({
   modules: {
     waifu: Waifu,
     animations: Animations
