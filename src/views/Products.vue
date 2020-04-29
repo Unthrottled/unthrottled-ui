@@ -619,6 +619,75 @@
           </p>
         </div>
       </div>
+      <hr class="productSeparator" />
+      <div>
+        <div class="productIconContainer">
+          <div>
+            <svg
+              width="205.14"
+              height="224.06"
+              version="1.1"
+              viewBox="0 0 6564.3 7169.8"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            >
+              <metadata>
+                <rdf:RDF>
+                  <cc:Work rdf:about="">
+                    <dc:format>image/svg+xml</dc:format>
+                    <dc:type
+                      rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+                    />
+                    <dc:title />
+                  </cc:Work>
+                </rdf:RDF>
+              </metadata>
+              <g>
+                <path
+                  d="m6359.1 1808.5c230.94 400 230.94 3153 0 3552.8-230.94 399.95-2615.2 1776.5-3077 1776.5-461.87 0-2846.1-1376.5-3077-1776.5-230.94-400-230.94-3153 0-3552.8 230.94-400 2615.2-1776.5 3077-1776.5 461.87 0 2846.1 1376.5 3077 1776.5z"
+                  fill="#42354c"
+                  stroke-width="15.094"
+                  style="paint-order:stroke fill markers"
+                />
+                <path
+                  d="m2646.5 2804.3c-126.47 35.746-227.04 131.77-268.6 256.45l-578.57 1735.7 91.106 91.106 930.96-930.96c-18.544-38.824-29.769-81.741-29.769-127.63 0-164.41 133.28-297.69 297.69-297.69s297.69 133.28 297.69 297.69-133.28 297.69-297.69 297.69c-45.894 0-88.811-11.225-127.63-29.769l-930.96 930.96 91.105 91.106 1735.7-578.57c124.68-41.56 220.7-142.14 256.45-268.6l265.38-938.96-793.84-793.84z"
+                  fill="#816b96"
+                  stroke-width="6.2019"
+                />
+                <path
+                  d="m4887.5 2403.5-372.79-372.79c-116.28-116.28-304.88-116.28-421.17 0l-350.72 350.72 793.96 793.96 350.72-350.72c116.28-116.28 116.28-304.82 0-421.17z"
+                  fill="#a53ba0"
+                  stroke-width="6.2019"
+                  accentTint="fill"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="productExcerpt">
+            <h1 class="productHeadline">Technical Blog</h1>
+            <h4 class="caption">
+              Who does not also have one of these?
+            </h4>
+          </div>
+        </div>
+        <div>
+          <p class="productTagline">
+            There are a <span class="highlight">lot of problems</span>
+            that exist and cannot be solved by a simple google search alone!
+            Take a peek at what I have overcome.
+          </p>
+          <p class="productTagline ">
+            <a
+              class="productLink"
+              href="https://blog.unthrottled.io"
+              target="_blank"
+              >https://blog.unthrottled.io</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
   </Layout>
 </template>
