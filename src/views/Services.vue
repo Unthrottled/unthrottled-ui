@@ -1,16 +1,34 @@
 <template>
   <Layout>
-    <div class="home"></div>
+    <div class="services">
+      <div class="service-hero-headline">
+        Give your ideas life.
+      </div>
+      <div>
+        <p>
+          Software makes the modern world and your product tick.
+        </p>
+        <p>
+          Whether you need something new or work done to an existing product,
+          then I have a solution for you. If it is on a computer, then I might
+          be part of that solution.
+        </p>
+      </div>
+    </div>
   </Layout>
 </template>
 
 <style lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
+.services {
+  margin: auto;
+  max-width: 550px;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+
+.service-hero-headline {
+  font-size: 3rem;
+  margin-top: 2rem;
+  font-weight: 400;
+  color: #fff;
 }
 </style>
 
