@@ -93,7 +93,7 @@ export default class Home extends Vue {
   }
 
   private onBannerDisplay() {
-    setTimeout(() => this.setBannerDisplayed(true), 1000);
+    setTimeout(() => this.setBannerDisplayed(true), 750);
   }
 }
 </script>
