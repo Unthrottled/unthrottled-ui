@@ -16,22 +16,13 @@
       </transition>
       <transition appear name="fade">
         <p class="preachySpeachy" v-if="closingLineShown">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet
-          purus gravida quis blandit turpis cursus in hac. Sit amet mauris
-          commodo quis imperdiet. Bibendum est ultricies integer quis auctor
-          elit. Ultrices neque ornare aenean euismod elementum nisi quis. Aenean
-          et tortor at risus. Augue mauris augue neque gravida in fermentum et
-          sollicitudin. Integer quis auctor elit sed vulputate mi. Ultrices
-          vitae auctor eu augue ut lectus arcu bibendum at. Nulla porttitor
-          massa id neque aliquam vestibulum morbi. Scelerisque in dictum non
-          consectetur. Purus viverra accumsan in nisl nisi scelerisque. Semper
-          quis lectus nulla at volutpat. Pellentesque habitant morbi tristique
-          senectus et netus et malesuada fames. Bibendum enim facilisis gravida
-          neque convallis a cras semper. Aliquet risus feugiat in ante metus
-          dictum at tempor commodo. Amet consectetur adipiscing elit ut aliquam.
-          Libero volutpat sed cras ornare arcu dui vivamus. Ut etiam sit amet
-          nisl purus in mollis nunc sed.
+          Why would you settle for anything less?<br /><br />
+          Never let anything or anyone prevent the achievement of your goals.
+          What you want to do is possible given time, effort, and reason.<br /><br />Let's
+          be real here, nobody will be able to dance on the surface of neutron
+          star. So not everything is possible. Do let me know if somebody
+          figures that out though. I would be happy to redefine what I think can
+          be done.
         </p>
       </transition>
     </div>
