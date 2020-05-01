@@ -22,6 +22,7 @@
           If you know what you are looking for already feel free to explore my
           skill tree.
         </p>
+        <SkillTree />
       </div>
     </div>
   </Layout>
@@ -54,8 +55,9 @@
 
 <script>
 import Layout from "../components/Layout";
+import SkillTree from "../components/SkillTree";
 export default {
   name: "Home",
-  components: { Layout }
+  components: { SkillTree, Layout }
 };
 </script>
