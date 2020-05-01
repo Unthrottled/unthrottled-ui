@@ -166,10 +166,10 @@ export default class Navigation extends Vue {
 
 .navContainer {
   top: 0;
+  z-index: 9001;
   position: fixed;
   width: 100%;
   background: #262b30;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
-  /*box-shadow: 0 0 1px 1px rgba(185, 32, 47, 0.27);*/
 }
 </style>
