@@ -1,10 +1,6 @@
 <template>
   <Layout>
-    <div class="home">
-      <transition enter-class="fade-enter">
-        <h1>Services!</h1>
-      </transition>
-    </div>
+    <div class="home"></div>
   </Layout>
 </template>
 

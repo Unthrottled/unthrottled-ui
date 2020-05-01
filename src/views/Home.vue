@@ -17,12 +17,12 @@
       <transition appear name="fade">
         <p class="preachySpeachy" v-if="closingLineShown">
           Why would you settle for anything less?<br /><br />
-          Never let anything or anyone prevent the achievement of your goals.
-          What you want to do is possible given time, effort, and reason.<br /><br />Let's
-          be real here, nobody will be able to dance on the surface of neutron
-          star. So not everything is possible. Do let me know if somebody
-          figures that out though. I would be happy to redefine what I think can
-          be done.
+          Never let anything prevent the success of your goals. What you want to
+          do is possible given time and effort. Before you can retort, let's be
+          real with each other. Nobody will ever be able to dance barefoot on
+          the surface of neutron star and live to tell about it. With that said,
+          anything is possible, <span class="highlight">within reason</span>. Do
+          let me know if somebody figures out dancing on a dead star though.
         </p>
       </transition>
     </div>
@@ -33,6 +33,11 @@
 .brandContainer {
   margin: auto;
   max-width: 500px;
+}
+
+.highlight {
+  color: #fff;
+  font-weight: 500;
 }
 
 .excerpt {
@@ -78,14 +83,14 @@ export default class Home extends Vue {
   private setClosingLineShown!: (value: boolean) => void;
 
   private excerptShown() {
-    setTimeout(() => this.setExceptShown(true), 1000);
+    setTimeout(() => this.setExceptShown(true), 1500);
   }
   private triggerClosingLineShown() {
-    setTimeout(() => this.setClosingLineShown(true), 500);
+    setTimeout(() => this.setClosingLineShown(true), 1750);
   }
 
   private onBannerDisplay() {
-    setTimeout(() => this.setBannerDisplayed(true), 250);
+    setTimeout(() => this.setBannerDisplayed(true), 1000);
   }
 }
 </script>
