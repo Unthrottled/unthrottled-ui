@@ -668,7 +668,7 @@
           <div class="productExcerpt">
             <h1 class="productHeadline">Technical Blog</h1>
             <h4 class="caption">
-              Who does not also have one of these?
+              Who doesn't have one of these? Well here is mine!
             </h4>
           </div>
         </div>
