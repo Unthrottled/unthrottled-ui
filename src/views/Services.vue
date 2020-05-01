@@ -27,7 +27,7 @@
 .service-hero-headline {
   font-size: 3rem;
   margin-top: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
 }
 </style>
