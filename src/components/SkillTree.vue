@@ -114,9 +114,9 @@ export default class Banner extends Vue {
         "link",
         forceLink(this.links)
           .id(d => d.id)
-          .distance(200)
+          .distance(150)
       )
-      .force("charge", forceManyBody())
+      .force("charge", forceManyBody().strength(-1000))
       .force("center", forceCenter(this.width / 2, this.height / 2));
 
     this.simulation.on("tick", () => {
@@ -155,6 +155,7 @@ export default class Banner extends Vue {
     this.node = this.node
       .enter()
       .append("svg")
+      .attr("class", "skillNode")
       .html(d => d.icon)
       .merge(this.node)
       .call(this.nodeDrag(this.simulation));
@@ -177,4 +178,8 @@ export default class Banner extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.skillNode {
+  cursor: pointer;
+}
+</style>
