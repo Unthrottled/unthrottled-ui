@@ -57,8 +57,6 @@ export default class Banner extends Vue {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null;
       d.fy = null;
-      this.links.push({ source: "CountessdeLo", target: "Napoleon", value: 1 });
-      this.drawNodes();
     };
 
     return drag()
@@ -66,6 +64,10 @@ export default class Banner extends Vue {
       .on("drag", dragged)
       .on("end", dragended);
   };
+
+  private simulation: any;
+  private link: any;
+  private node: any;
 
   mounted() {
     const canvas = select("#skill-tree-canvas");
@@ -80,33 +82,7 @@ export default class Banner extends Vue {
       })
     );
 
-    drawGroup
-      .append("g")
-      .attr("stroke", "#999")
-      .attr("id", "linkGroup")
-      .attr("stroke-opacity", 0.6)
-      .selectAll("line");
-
-    drawGroup.append("g").attr("id", "nodeGroup");
-
-    this.drawNodes();
-  }
-
-  drawNodes() {
-    const linkData = select("#linkGroup")
-      .selectAll("line")
-      .data(this.links);
-
-    const link = linkData
-      .enter()
-      .append("line")
-      .attr("stroke-width", d => Math.sqrt(d.value));
-
-    linkData.exit().remove();
-
-    // eslint-disable-next-line
-    // @ts-ignore
-    const simulation = forceSimulation(this.nodes)
+    this.simulation = forceSimulation(this.nodes)
       .force(
         "link",
         forceLink(this.links).id(d => d.id)
@@ -114,27 +90,60 @@ export default class Banner extends Vue {
       .force("charge", forceManyBody())
       .force("center", forceCenter(this.width / 2, this.height / 2));
 
-    const node = select("#nodeGroup")
-      .attr("stroke", "#fff")
-      .attr("stroke-width", 1.5)
-      .selectAll("circle")
-      .data(this.nodes)
-      .join("circle")
-      .attr("r", 5)
-      .attr("fill", "red")
-      .call(this.nodeDrag(simulation));
-
-    node.append("title").text(d => d.id);
-
-    simulation.on("tick", () => {
-      link
+    this.simulation.on("tick", () => {
+      this.link
         .attr("x1", d => d.source.x)
         .attr("y1", d => d.source.y)
         .attr("x2", d => d.target.x)
         .attr("y2", d => d.target.y);
 
-      node.attr("cx", d => d.x).attr("cy", d => d.y);
+      this.node.attr("cx", d => d.x).attr("cy", d => d.y);
     });
+
+    this.link = drawGroup
+      .append("g")
+      .attr("stroke", "#999")
+      .attr("id", "linkGroup")
+      .attr("stroke-opacity", 0.6)
+      .selectAll("line");
+
+    this.node = drawGroup
+      .append("g")
+      .attr("id", "nodeGroup")
+      .attr("stroke", "#fff")
+      .attr("stroke-width", 1.5)
+      .selectAll("circle");
+
+    this.drawTree();
+  }
+
+  drawTree() {
+    // Apply the general update pattern to the nodes.
+    this.node = this.node.data(this.nodes, function(d) {
+      return d.id;
+    });
+    this.node.exit().remove();
+    this.node = this.node
+      .enter()
+      .append("circle")
+      .attr("r", 8)
+      .merge(this.node)
+      .call(this.nodeDrag(this.simulation));
+
+    // Apply the general update pattern to the links.
+    this.link = this.link.data(this.links, function(d) {
+      return d.source.id + "-" + d.target.id;
+    });
+    this.link.exit().remove();
+    this.link = this.link
+      .enter()
+      .append("line")
+      .merge(this.link);
+
+    // Update and restart the simulation.
+    this.simulation.this.nodes(this.nodes);
+    this.simulation.force("link").links(this.links);
+    this.simulation.alpha(1).restart();
   }
 }
 </script>
