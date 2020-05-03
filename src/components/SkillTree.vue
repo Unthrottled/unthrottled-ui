@@ -14,7 +14,9 @@ import {
   forceSimulation,
   forceLink,
   forceManyBody,
-  forceCenter
+  forceCenter,
+  forceX,
+  forceY
 } from "d3-force";
 import { zoom } from "d3-zoom";
 import link from "vue-router/src/components/link";
@@ -70,10 +72,10 @@ const mlNodes = [
   }
 ];
 const mlLinks = [
-  { source: pyTorchId, target: machineLearningId, value: 1, distance: 10 },
-  { source: swtfId, target: machineLearningId, value: 1, distance: 10 },
-  { source: swiftId, target: swtfId, value: 1, distance: 10 },
-  { source: pythonId, target: pyTorchId, value: 1, distance: 10 }
+  { source: pyTorchId, target: machineLearningId, value: 1, distance: 100 },
+  { source: swtfId, target: machineLearningId, value: 1, distance: 100 },
+  { source: swiftId, target: swtfId, value: 1, distance: 100 },
+  { source: pythonId, target: pyTorchId, value: 1, distance: 100 }
 ];
 
 const mobileDevId = "Mobile Development";
@@ -118,12 +120,12 @@ const mobileNodes = [
 ];
 
 const mobileLinks = [
-  { source: androidId, target: mobileDevId, value: 1, distance: 10 },
-  { source: iosId, target: mobileDevId, value: 1, distance: 10 },
+  { source: androidId, target: mobileDevId, value: 1, distance: 100 },
+  { source: iosId, target: mobileDevId, value: 1, distance: 100 },
   { source: rnId, target: mobileDevId, value: 1, distance: 100 },
-  { source: kotlinId, target: androidId, value: 1, distance: 10 },
-  { source: javaId, target: androidId, value: 1, distance: 10 },
-  { source: ocId, target: iosId, value: 1, distance: 10 }
+  { source: kotlinId, target: androidId, value: 1, distance: 100 },
+  { source: javaId, target: androidId, value: 1, distance: 100 },
+  { source: ocId, target: iosId, value: 1, distance: 100 }
 ];
 
 const webDevId = "Web Development";
@@ -182,15 +184,15 @@ const webDevNodes = [
 ];
 
 const webDevLinks = [
-  { source: serverSideId, target: webDevId, value: 1, distance: 10 },
-  { source: browserSideId, target: webDevId, value: 1, distance: 10 },
-  { source: reactId, target: browserSideId, value: 1, distance: 10 },
-  { source: angularId, target: browserSideId, value: 1, distance: 10 },
-  { source: vueId, target: browserSideId, value: 1, distance: 10 },
-  { source: kotlinId, target: serverSideId, value: 1, distance: 10 },
-  { source: javaId, target: serverSideId, value: 1, distance: 10 },
-  { source: typescriptId, target: serverSideId, value: 1, distance: 10 },
-  { source: typescriptId, target: browserSideId, value: 1, distance: 10 }
+  { source: serverSideId, target: webDevId, value: 1, distance: 100 },
+  { source: browserSideId, target: webDevId, value: 1, distance: 100 },
+  { source: reactId, target: browserSideId, value: 1, distance: 100 },
+  { source: angularId, target: browserSideId, value: 1, distance: 100 },
+  { source: vueId, target: browserSideId, value: 1, distance: 100 },
+  { source: kotlinId, target: serverSideId, value: 1, distance: 100 },
+  { source: javaId, target: serverSideId, value: 1, distance: 100 },
+  { source: typescriptId, target: serverSideId, value: 1, distance: 100 },
+  { source: typescriptId, target: browserSideId, value: 1, distance: 100 }
 ];
 
 const alexId = "Alex Simons";
@@ -325,7 +327,12 @@ export default class Banner extends Vue {
           .id(d => d.id)
           .distance(d => d.distance || 150)
       )
-      .force("charge", forceManyBody().strength(-1000))
+      .force(
+        "charge",
+        forceManyBody()
+          .strength(-200)
+          .distanceMax(1000)
+      )
       .force("center", forceCenter(this.width / 2, this.height / 2));
 
     this.simulation.on("tick", () => {
