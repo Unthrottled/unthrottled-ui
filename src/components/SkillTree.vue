@@ -17,6 +17,7 @@ import {
   forceCenter
 } from "d3-force";
 import { zoom } from "d3-zoom";
+import link from "vue-router/src/components/link";
 
 @Component({
   components: { Layout }
@@ -56,6 +57,8 @@ export default class Banner extends Vue {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null;
       d.fy = null;
+      this.links.push({ source: "CountessdeLo", target: "Napoleon", value: 1 });
+      this.drawNodes();
     };
 
     return drag()
@@ -76,16 +79,27 @@ export default class Banner extends Vue {
         drawGroup.attr("transform", event.transform);
       })
     );
-    const linkGroup = drawGroup
+
+    drawGroup
       .append("g")
       .attr("stroke", "#999")
+      .attr("id", "linkGroup")
       .attr("stroke-opacity", 0.6)
       .selectAll("line");
 
-    const linkData = linkGroup.data(this.links);
+    drawGroup.append("g").attr("id", "nodeGroup");
+
+    this.drawNodes();
+  }
+
+  drawNodes() {
+    const linkData = select("#linkGroup")
+      .selectAll("line")
+      .data(this.links);
 
     const link = linkData
-      .join("line")
+      .enter()
+      .append("line")
       .attr("stroke-width", d => Math.sqrt(d.value));
 
     linkData.exit().remove();
@@ -100,8 +114,7 @@ export default class Banner extends Vue {
       .force("charge", forceManyBody())
       .force("center", forceCenter(this.width / 2, this.height / 2));
 
-    const node = drawGroup
-      .append("g")
+    const node = select("#nodeGroup")
       .attr("stroke", "#fff")
       .attr("stroke-width", 1.5)
       .selectAll("circle")
@@ -109,7 +122,6 @@ export default class Banner extends Vue {
       .join("circle")
       .attr("r", 5)
       .attr("fill", "red")
-      .on("mouseup", d => console.log("clicked node", d))
       .call(this.nodeDrag(simulation));
 
     node.append("title").text(d => d.id);
