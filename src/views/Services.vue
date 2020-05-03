@@ -13,7 +13,7 @@
         </p>
 
         <p>
-          To see if we right fit for each other contact me via:
+          To see if we right fit for each other contact Alex Simons via:
         </p>
         <a class="servicesLink" href="mailto:services@unthrottled.io"
           >services@unthrottled.io</a
