@@ -57,6 +57,8 @@ export default class Banner extends Vue {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null;
       d.fy = null;
+      this.links.push({ source: "Napoleon", target: "CountessdeLo", value: 1 });
+      this.drawTree();
     };
 
     return drag()
@@ -141,7 +143,7 @@ export default class Banner extends Vue {
       .merge(this.link);
 
     // Update and restart the simulation.
-    this.simulation.this.nodes(this.nodes);
+    this.simulation.nodes(this.nodes);
     this.simulation.force("link").links(this.links);
     this.simulation.alpha(1).restart();
   }
