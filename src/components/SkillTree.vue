@@ -87,7 +87,9 @@ export default class Banner extends Vue {
     this.simulation = forceSimulation(this.nodes)
       .force(
         "link",
-        forceLink(this.links).id(d => d.id)
+        forceLink(this.links)
+          .id(d => d.id)
+          .distance(200)
       )
       .force("charge", forceManyBody())
       .force("center", forceCenter(this.width / 2, this.height / 2));
@@ -99,7 +101,7 @@ export default class Banner extends Vue {
         .attr("x2", d => d.target.x)
         .attr("y2", d => d.target.y);
 
-      this.node.attr("cx", d => d.x).attr("cy", d => d.y);
+      this.node.attr("x", d => d.x - 30).attr("y", d => d.y - 30);
     });
 
     this.link = drawGroup
@@ -114,7 +116,7 @@ export default class Banner extends Vue {
       .attr("id", "nodeGroup")
       .attr("stroke", "#fff")
       .attr("stroke-width", 1.5)
-      .selectAll("circle");
+      .selectAll(".skillNode");
 
     this.drawTree();
   }
@@ -127,8 +129,31 @@ export default class Banner extends Vue {
     this.node.exit().remove();
     this.node = this.node
       .enter()
-      .append("circle")
-      .attr("r", 8)
+      .append("svg")
+      .html(
+        `
+              <path
+                d="m49.736 30.143a22.105 22.105 0 0 1-22.031 22.105 22.105 22.105 0 0 1-22.179-21.956 22.105 22.105 0 0 1 21.881-22.252 22.105 22.105 0 0 1 22.326 21.807"
+                fill="#ededed"
+                stroke-width="0"
+                style="paint-order:stroke fill markers"
+              />
+              <path
+                d="m102.56 0.99805c-14.431 0-88.941 43.015-96.158 55.516-7.2172 12.495-7.2172 98.525 0 111.03 7.2153 12.499 81.724 55.516 96.158 55.516 14.431 0 88.941-43.017 96.158-55.516 7.2172-12.495 7.2172-98.525 0-111.03-7.2153-12.499-81.724-55.516-96.158-55.516zm-41.264 41.732h17.123c10.036 0 17.756 2.123 23.16 6.3691 5.4594 4.2462 10.065 11.389 13.814 21.426l37.885 100.91h-29.613l-18.445-48.637-19.439 48.637h-29.613l35.818-84.373-5.1289-13.896c-1.544-4.2462-3.3634-7.1415-5.459-8.6855-2.0403-1.544-5.6542-2.3145-10.838-2.3145h-9.2637v-19.439z"
+                fill="#30373E"
+                stroke-width=".4717"
+                style="paint-order:stroke fill markers"
+                transform="matrix(.26458 0 0 .26458 -.00010697 0)"
+              />
+              <path
+                d="m173.31 36.273v0.005859c0.14637 0.4065 0.29496 0.81214 0.43164 1.2227 1.6284 1.5198-6.969 42.977-43.41 72.809l22.949 61.129h-29.613l-17.332-45.703c-0.93341 0.46033-1.8726 0.91781-2.8301 1.3613l-17.723 44.342h-29.613l14.404-33.93c-18.983 3.5877-41.22 4.141-67.254 0.15429-0.67709-2.0458-1.3096-4.0594-1.9219-6.0586 0.71189 16.992 2.3728 31.373 5.0059 35.934 7.2154 12.499 81.724 55.518 96.158 55.518 14.431 0 88.943-43.018 96.16-55.518 7.2173-12.495 7.2173-98.526 0-111.03-2.4314-4.212-12.572-11.906-25.412-20.234z"
+                fill="#161a1d"
+                stroke-width=".47171"
+                style="paint-order:stroke fill markers"
+                transform="matrix(.26458 0 0 .26458 -.00010697 0)"
+              />
+            `
+      )
       .merge(this.node)
       .call(this.nodeDrag(this.simulation));
 
