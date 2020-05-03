@@ -69,13 +69,13 @@ const mlNodes = [
     icon: mlIcon
   }
 ];
-
 const mlLinks = [
   { source: pyTorchId, target: machineLearningId, value: 1, distance: 10 },
   { source: swtfId, target: machineLearningId, value: 1, distance: 10 },
   { source: swiftId, target: swtfId, value: 1, distance: 10 },
   { source: pythonId, target: pyTorchId, value: 1, distance: 10 }
 ];
+
 const mobileDevId = "Mobile Development";
 const iosId = "iOS";
 const androidId = "Android";
@@ -127,6 +127,72 @@ const mobileLinks = [
 ];
 
 const webDevId = "Web Development";
+const serverSideId = "Server Side";
+const browserSideId = "Browser Side";
+const typescriptId = "Typescript";
+const reactId = "React";
+const vueId = "Vue";
+const angularId = "Angular";
+
+const webDevNodes = [
+  {
+    id: serverSideId,
+    group: 1,
+    icon: webIcon
+  },
+
+  {
+    id: browserSideId,
+    group: 1,
+    icon: webIcon
+  },
+
+  {
+    id: kotlinId,
+    group: 1,
+    icon: webIcon
+  },
+
+  {
+    id: javaId,
+    group: 1,
+    icon: webIcon
+  },
+
+  {
+    id: typescriptId,
+    group: 1,
+    icon: webIcon
+  },
+  {
+    id: reactId,
+    group: 1,
+    icon: webIcon
+  },
+  {
+    id: angularId,
+    group: 1,
+    icon: webIcon
+  },
+  {
+    id: vueId,
+    group: 1,
+    icon: webIcon
+  }
+];
+
+const webDevLinks = [
+  { source: serverSideId, target: webDevId, value: 1, distance: 10 },
+  { source: browserSideId, target: webDevId, value: 1, distance: 10 },
+  { source: reactId, target: browserSideId, value: 1, distance: 10 },
+  { source: angularId, target: browserSideId, value: 1, distance: 10 },
+  { source: vueId, target: browserSideId, value: 1, distance: 10 },
+  { source: kotlinId, target: serverSideId, value: 1, distance: 10 },
+  { source: javaId, target: serverSideId, value: 1, distance: 10 },
+  { source: typescriptId, target: serverSideId, value: 1, distance: 10 },
+  { source: typescriptId, target: browserSideId, value: 1, distance: 10 }
+];
+
 const alexId = "Alex Simons";
 @Component({
   components: { Layout }
@@ -150,7 +216,11 @@ export default class Banner extends Vue {
     {
       id: webDevId,
       group: 1,
-      icon: webIcon
+      icon: webIcon,
+      children: {
+        nodes: webDevNodes,
+        links: webDevLinks
+      }
     },
     {
       id: machineLearningId,
@@ -211,11 +281,14 @@ export default class Banner extends Vue {
     if (!this.expandedNodes[nodeId]) {
       this.expandedNodes[nodeId] = nodeId;
       if (node.children) {
-        this.nodes.push(...node.children.nodes);
+        const drawableNodes = node.children.nodes.filter(
+          n => !this.drawnNodes[n.id]
+        );
+        this.nodes.push(...drawableNodes);
         this.links.push(...node.children.links);
         this.drawnNodes = {
           ...this.drawnNodes,
-          ...node.children.nodes.reduce((a, n) => {
+          ...drawableNodes.reduce((a, n) => {
             a[n.id] = a.id;
             return a;
           }, {})
