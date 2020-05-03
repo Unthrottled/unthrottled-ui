@@ -36,6 +36,48 @@ const webIcon = `<path d="m52.577 14.952c1.9095 3.3073 1.9095 26.069 0 29.375-1.
 <path transform="matrix(.26458 0 0 .26458 -.00010697 0)" d="m173.31 36.279c0.14637 0.40649 0.29496 0.81219 0.43164 1.2227 2.7906 2.6045-24.408 122.52-170.42 100.16-0.67708-2.0458-1.3096-4.0594-1.9219-6.0586 0.71188 16.992 2.3729 31.373 5.0059 35.934 7.2153 12.499 81.724 55.516 96.158 55.516 14.431 0 88.941-43.017 96.158-55.516 7.2172-12.495 7.2172-98.525 0-111.03-2.4314-4.2119-12.572-11.906-25.412-20.234z" fill="#161a1d" stroke-width=".4717" style="paint-order:stroke fill markers"/>
 <path d="m27.128 10.082c-11.08 0-20.061 8.9817-20.061 20.061 0 11.08 8.9817 20.061 20.061 20.061 11.08 0 20.061-8.9817 20.061-20.061 0-11.08-8.9818-20.061-20.061-20.061zm-17.49 21.315h4.3023c0.09572 2.0817 0.41032 3.9863 0.89891 5.6968h-3.823c-0.76552-1.7675-1.2351-3.6869-1.3782-5.6968zm23.679-2.5077c-0.09433-2.0154-0.33326-3.9244-0.6567-5.6968h4.1099c0.54706 1.6822 0.92258 3.5791 1.0358 5.6968zm-9.351 8.2044c-0.3539-1.954-0.52757-3.8613-0.55975-5.6968h7.4442c-0.0321 1.8355-0.20585 3.7428-0.55983 5.6968zm5.7783 2.5077c-0.58792 2.2569-1.4389 4.5576-2.6162 6.8633-1.1772-2.3057-2.028-4.6063-2.6158-6.8633zm-6.3039-10.712c0.09932-2.0269 0.35562-3.9369 0.69592-5.6968h5.984c0.34039 1.7598 0.5966 3.6698 0.69601 5.6968zm1.2594-8.2044c0.78362-3.0591 1.7518-5.4727 2.4283-6.9587 0.6766 1.486 1.6449 3.8996 2.4286 6.9587zm7.4291 0c-0.8-3.3152-1.8272-5.9783-2.5897-7.6995 0.94763 0.67431 4.096 3.1667 6.2436 7.6995zm-7.4118-7.6996c-0.7625 1.7212-1.7896 4.3843-2.5895 7.6996h-3.6543c2.1479-4.5332 5.2964-7.0256 6.2437-7.6996zm-3.1208 10.207c-0.32344 1.7724-0.56229 3.6814-0.65662 5.6968h-4.4895c0.11324-2.1176 0.48868-4.0146 1.0358-5.6968zm-7.6531 5.6967h-4.305c0.14305-2.0098 0.61257-3.9291 1.3781-5.6968h3.8405c-0.4922 1.7102-0.81302 3.6135-0.91357 5.6968zm2.5057 2.5077h4.4564c0.02849 1.8386 0.18317 3.7434 0.51103 5.6968h-3.929c-0.55173-1.6865-0.92847-3.584-1.0384-5.6968zm5.4867 8.2044c0.6151 2.5534 1.5288 5.1631 2.8449 7.7832-0.88818-0.6359-4.1169-3.1756-6.3061-7.7832zm7.5374 7.7889c1.3178-2.6221 2.2323-5.2336 2.848-7.7889h3.4862c-2.1826 4.6311-5.4252 7.1498-6.3341 7.7889zm3.3674-10.297c0.32794-1.9534 0.48262-3.8582 0.51103-5.6968h4.4572c-0.10784 2.1166-0.47852 4.0136-1.0221 5.6968zm7.4753-5.6968h4.3028c-0.14313 2.0098-0.61265 3.9292-1.3782 5.6968h-3.8234c0.4886-1.7105 0.80311-3.6151 0.89883-5.6968zm-0.0025-2.5077c-0.10053-2.0834-0.42135-3.9866-0.91354-5.6968h3.841c0.76561 1.7676 1.235 3.6869 1.3781 5.6968zm1.5795-8.2044h-3.3772c-1.1209-2.7-2.5822-4.8358-3.9573-6.4226 3.0081 1.4133 5.55 3.6471 7.3343 6.4226zm-22.195-6.4222c-1.375 1.5867-2.8361 3.7225-3.9569 6.4222h-3.3768c1.7841-2.7753 4.3258-5.0089 7.3335-6.4222zm-7.3336 25.339h3.3561c1.1039 2.6724 2.5446 4.8011 3.9101 6.3897-2.9782-1.4151-5.4954-3.6353-7.2662-6.3897zm22.263 6.3893c1.3652-1.5884 2.8056-3.7171 3.9093-6.3893h3.3564c-1.7706 2.7542-4.2876 4.9742-7.2656 6.3893z" fill="none" stroke="#fff" stroke-width=".82257"/>`;
 
+const machineLearningId = "Machine Learning";
+
+const pyTorchId = "Pytorch";
+const swtfId = "Swift for TensorFlow";
+
+const pythonId = "Python";
+const swiftId = "Swift";
+
+const mlNodes = [
+  {
+    id: pythonId,
+    group: 1,
+    icon: mlIcon
+  },
+
+  {
+    id: pyTorchId,
+    group: 1,
+    icon: mlIcon
+  },
+
+  {
+    id: swiftId,
+    group: 1,
+    icon: mlIcon
+  },
+
+  {
+    id: swtfId,
+    group: 1,
+    icon: mlIcon
+  }
+];
+
+const mlLinks = [
+  { source: pyTorchId, target: machineLearningId, value: 1, distance: 10 },
+  { source: swtfId, target: machineLearningId, value: 1, distance: 10 },
+  { source: swiftId, target: swtfId, value: 1, distance: 10 },
+  { source: pythonId, target: pyTorchId, value: 1, distance: 10 }
+];
+const mobileDevId = "Mobile Development";
+const webDevId = "Web Development";
 @Component({
   components: { Layout }
 })
@@ -47,26 +89,32 @@ export default class Banner extends Vue {
       icon: userIcon
     },
     {
-      id: "Mobile Development",
+      id: mobileDevId,
       group: 1,
       icon: mobileIcon
     },
     {
-      id: "Machine Learning",
-      group: 1,
-      icon: mlIcon
-    },
-    {
-      id: "Web Development",
+      id: webDevId,
       group: 1,
       icon: webIcon
+    },
+    {
+      id: machineLearningId,
+      group: 1,
+      icon: mlIcon,
+      children: {
+        nodes: mlNodes,
+        links: mlLinks
+      }
     }
   ];
   private links = [
-    { source: "Mobile Development", target: "Alex Simons", value: 1 },
-    { source: "Machine Learning", target: "Alex Simons", value: 8 },
-    { source: "Web Development", target: "Alex Simons", value: 1 }
+    { source: mobileDevId, target: "Alex Simons", value: 1 },
+    { source: machineLearningId, target: "Alex Simons", value: 8 },
+    { source: webDevId, target: "Alex Simons", value: 1 }
   ];
+
+  private expandedNodes = {};
 
   private width = 500;
   private height = 500;
@@ -87,12 +135,9 @@ export default class Banner extends Vue {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null;
       d.fy = null;
-      this.links.push({
-        source: "Mobile Development",
-        target: "Web Development",
-        value: 1
-      });
-      this.drawTree();
+      if (this.addedToTree(d)) {
+        this.drawTree();
+      }
     };
 
     return drag()
@@ -100,6 +145,20 @@ export default class Banner extends Vue {
       .on("drag", dragged)
       .on("end", dragended);
   };
+
+  addedToTree(node: any): boolean {
+    console.log(node);
+    const nodeId = node.id;
+    if (!this.expandedNodes[nodeId]) {
+      if (node.children) {
+        this.nodes.push(...node.children.nodes);
+        this.links.push(...node.children.links);
+      }
+      this.expandedNodes[nodeId] = nodeId;
+      return true;
+    }
+    return false;
+  }
 
   private simulation: any;
   private link: any;
@@ -109,6 +168,7 @@ export default class Banner extends Vue {
     const canvas = select("#skill-tree-canvas");
     const skillTreeSvg = canvas
       .append("svg")
+      .attr("class", "skillTree")
       .attr("viewBox", `0 0 ${this.width} ${this.height}`);
 
     const drawGroup = skillTreeSvg.append("g");
@@ -123,7 +183,7 @@ export default class Banner extends Vue {
         "link",
         forceLink(this.links)
           .id(d => d.id)
-          .distance(150)
+          .distance(d => d.distance || 150)
       )
       .force("charge", forceManyBody().strength(-1000))
       .force("center", forceCenter(this.width / 2, this.height / 2));
@@ -189,6 +249,9 @@ export default class Banner extends Vue {
 </script>
 
 <style lang="scss">
+.skillTree {
+  cursor: move;
+}
 .skillNode {
   cursor: pointer;
 }
