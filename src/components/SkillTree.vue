@@ -281,15 +281,16 @@ export default class Banner extends Vue {
     if (!this.expandedNodes[nodeId]) {
       this.expandedNodes[nodeId] = nodeId;
       if (node.children) {
-        const drawableNodes = node.children.nodes.filter(
-          n => !this.drawnNodes[n.id]
-        );
+        const drawableNodes = node.children.nodes.filter(n => {
+          console.log("node", n.id, !this.drawnNodes[n.id]);
+          return !this.drawnNodes[n.id];
+        });
         this.nodes.push(...drawableNodes);
         this.links.push(...node.children.links);
         this.drawnNodes = {
           ...this.drawnNodes,
           ...drawableNodes.reduce((a, n) => {
-            a[n.id] = a.id;
+            a[n.id] = n.id;
             return a;
           }, {})
         };
