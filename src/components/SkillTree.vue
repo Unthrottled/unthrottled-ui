@@ -77,21 +77,75 @@ const mlLinks = [
   { source: pythonId, target: pyTorchId, value: 1, distance: 10 }
 ];
 const mobileDevId = "Mobile Development";
+const iosId = "iOS";
+const androidId = "Android";
+const rnId = "React Native";
+const kotlinId = "Kotlin";
+const javaId = "Java";
+const ocId = "Objective-C";
+
+const mobileNodes = [
+  {
+    id: iosId,
+    group: 1,
+    icon: mobileIcon
+  },
+  {
+    id: androidId,
+    group: 1,
+    icon: mobileIcon
+  },
+  {
+    id: rnId,
+    group: 1,
+    icon: mobileIcon
+  },
+  {
+    id: javaId,
+    group: 1,
+    icon: mobileIcon
+  },
+  {
+    id: kotlinId,
+    group: 1,
+    icon: mobileIcon
+  },
+  {
+    id: ocId,
+    group: 1,
+    icon: mobileIcon
+  }
+];
+
+const mobileLinks = [
+  { source: androidId, target: mobileDevId, value: 1, distance: 10 },
+  { source: iosId, target: mobileDevId, value: 1, distance: 10 },
+  { source: rnId, target: mobileDevId, value: 1, distance: 100 },
+  { source: kotlinId, target: androidId, value: 1, distance: 10 },
+  { source: javaId, target: androidId, value: 1, distance: 10 },
+  { source: ocId, target: iosId, value: 1, distance: 10 }
+];
+
 const webDevId = "Web Development";
+const alexId = "Alex Simons";
 @Component({
   components: { Layout }
 })
 export default class Banner extends Vue {
   private nodes = [
     {
-      id: "Alex Simons",
+      id: alexId,
       group: 1,
       icon: userIcon
     },
     {
       id: mobileDevId,
       group: 1,
-      icon: mobileIcon
+      icon: mobileIcon,
+      children: {
+        nodes: mobileNodes,
+        links: mobileLinks
+      }
     },
     {
       id: webDevId,
@@ -109,12 +163,18 @@ export default class Banner extends Vue {
     }
   ];
   private links = [
-    { source: mobileDevId, target: "Alex Simons", value: 1 },
-    { source: machineLearningId, target: "Alex Simons", value: 8 },
-    { source: webDevId, target: "Alex Simons", value: 1 }
+    { source: mobileDevId, target: alexId, value: 1 },
+    { source: machineLearningId, target: alexId, value: 8 },
+    { source: webDevId, target: alexId, value: 1 }
   ];
 
   private expandedNodes = {};
+  private drawnNodes = {
+    machineLearningId,
+    mobileDevId,
+    alexId,
+    webDevId
+  };
 
   private width = 500;
   private height = 500;
@@ -147,15 +207,21 @@ export default class Banner extends Vue {
   };
 
   addedToTree(node: any): boolean {
-    console.log(node);
     const nodeId = node.id;
     if (!this.expandedNodes[nodeId]) {
+      this.expandedNodes[nodeId] = nodeId;
       if (node.children) {
         this.nodes.push(...node.children.nodes);
         this.links.push(...node.children.links);
+        this.drawnNodes = {
+          ...this.drawnNodes,
+          ...node.children.nodes.reduce((a, n) => {
+            a[n.id] = a.id;
+            return a;
+          }, {})
+        };
+        return true;
       }
-      this.expandedNodes[nodeId] = nodeId;
-      return true;
     }
     return false;
   }
