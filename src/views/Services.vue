@@ -8,8 +8,8 @@
         <p class="service-description">
           Whether you need something new or work done to an existing product. I
           have a solution for you. If involves a computer then I may be part of
-          that solution. If you are ready to put your business in capable hands,
-          look no further.
+          that solution. When you are ready to put your business in capable
+          hands, look no further.
         </p>
 
         <p>
@@ -19,8 +19,8 @@
           >services@unthrottled.io</a
         >
         <p class="service-description">
-          If you know what you are looking for already feel free to explore my
-          skill tree.
+          If you already know what you are looking for already feel free to
+          explore my skill tree.
         </p>
         <SkillTree />
       </div>

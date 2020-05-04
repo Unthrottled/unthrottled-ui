@@ -17,15 +17,8 @@
       <transition appear name="fade">
         <p class="preachySpeachy" v-if="closingLineShown">
           Why would you settle for anything less?<br /><br />
-          Never let anything prevent the success of your goals. What you want to
-          do is possible given time and effort. However, let's be real with each
-          other. Nobody will ever be able to dance barefoot on the surface of
-          neutron star and live to tell about it. With that said, anything is
-          possible, <span class="highlight">within reason</span>.
-          <em
-            >Do let me know if somebody figures out dancing on a dead star
-            though.</em
-          >
+          Never let anything prevent you from achieving your goals. What you
+          want to do is possible given time, effort, and reason.
         </p>
       </transition>
     </div>

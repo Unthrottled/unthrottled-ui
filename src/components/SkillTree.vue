@@ -14,7 +14,9 @@ import {
   forceCenter,
   forceLink,
   forceManyBody,
-  forceSimulation
+  forceSimulation,
+  forceX,
+  forceY
 } from "d3-force";
 import { zoom } from "d3-zoom";
 import link from "vue-router/src/components/link";
