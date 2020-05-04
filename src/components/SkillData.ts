@@ -231,21 +231,21 @@ export const initialDrawnNodes = {
 };
 export const initialSkillNodes = [
   {
-    id: webDevId,
-    group: 1,
-    icon: webIcon,
-    children: {
-      nodes: webDevNodes,
-      links: webDevLinks
-    }
-  },
-  {
     id: mobileDevId,
     group: 1,
     icon: mobileIcon,
     children: {
       nodes: mobileNodes,
       links: mobileLinks
+    }
+  },
+  {
+    id: webDevId,
+    group: 1,
+    icon: webIcon,
+    children: {
+      nodes: webDevNodes,
+      links: webDevLinks
     }
   },
   {

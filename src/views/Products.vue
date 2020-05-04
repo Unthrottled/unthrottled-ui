@@ -565,7 +565,7 @@
             </svg>
           </div>
           <div class="productExcerpt">
-            <h1 class="productHeadline">Frugal Aws Dev</h1>
+            <h1 class="productHeadline">Frugal AWS Dev</h1>
             <h4 class="caption">
               Stay in production without breaking the bank.
             </h4>
