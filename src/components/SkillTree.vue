@@ -187,6 +187,6 @@ export default class Banner extends Vue {
 }
 
 .skillNode {
-  cursor: pointer;
+  cursor: grab;
 }
 </style>
