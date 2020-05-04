@@ -79,7 +79,7 @@ export default class Home extends Vue {
   private setClosingLineShown!: (value: boolean) => void;
 
   private excerptShown() {
-    setTimeout(() => this.setExceptShown(true), 1500);
+    setTimeout(() => this.setExceptShown(true), 1250);
   }
   private triggerClosingLineShown() {
     setTimeout(() => this.setClosingLineShown(true), 1750);
