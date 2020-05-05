@@ -82,7 +82,7 @@ export default class Home extends Vue {
     setTimeout(() => this.setExceptShown(true), 1250);
   }
   private triggerClosingLineShown() {
-    setTimeout(() => this.setClosingLineShown(true), 1750);
+    setTimeout(() => this.setClosingLineShown(true), 1000);
   }
 
   private onBannerDisplay() {
