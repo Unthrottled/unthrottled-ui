@@ -61,9 +61,6 @@ export default class Banner extends Vue {
       d.fy = null;
       if (this.addedToTree(d)) {
         this.drawTree();
-        setTimeout(() => {
-          this.zoomFit();
-        }, 100);
       }
     };
 
@@ -154,32 +151,6 @@ export default class Banner extends Vue {
       .selectAll(".skillNode");
 
     this.drawTree();
-  }
-
-  zoomFit() {
-    const bounds = this.drawnGroup.node().getBBox();
-    const parent = this.drawnGroup.node().parentElement;
-    const fullWidth = parent.clientWidth,
-      fullHeight = parent.clientHeight;
-    const width = bounds.width,
-      height = bounds.height;
-    const midX = bounds.x + width / 2,
-      midY = bounds.y + height / 2;
-    if (width == 0 || height == 0) return;
-    const scale = 0.75 / Math.max(width / fullWidth, height / fullHeight);
-    const translate = [
-      fullWidth / 2 - scale * midX,
-      fullHeight / 2 - scale * midY
-    ];
-
-    const transform = zoomIdentity
-      .translate(translate[0], translate[1])
-      .scale(scale);
-
-    this.drawnGroup
-      .transition()
-      .duration(250)
-      .call(this.zoomBehaviour.transform, transform);
   }
 
   drawTree() {
