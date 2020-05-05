@@ -13,14 +13,17 @@
         </p>
 
         <p>
-          To see if we right fit for each other contact Alex Simons via:
+          To see if we right fit for each other, contact Alex Simons via:
         </p>
-        <a class="servicesLink" href="mailto:services@unthrottled.io"
-          >services@unthrottled.io</a
+        <a class="servicesLink" href="mailto:contact@unthrottled.io"
+          >contact@unthrottled.io</a
         >
         <p class="service-description">
           If you already know what you are looking for already feel free to
           explore my skill tree.
+        </p>
+        <p>
+          You can click each node to expand the branch.
         </p>
         <SkillTree />
       </div>

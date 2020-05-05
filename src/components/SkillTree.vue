@@ -18,7 +18,7 @@ import {
   forceX,
   forceY
 } from "d3-force";
-import { zoom } from "d3-zoom";
+import { zoom, zoomIdentity } from "d3-zoom";
 import link from "vue-router/src/components/link";
 import {
   initialDrawnNodes,
@@ -40,6 +40,8 @@ export default class Banner extends Vue {
   private simulation: any;
   private link: any;
   private node: any;
+  private drawnGroup: any;
+  private zoomBehaviour: any;
 
   nodeDrag = simulation => {
     const dragstarted = d => {
@@ -59,6 +61,9 @@ export default class Banner extends Vue {
       d.fy = null;
       if (this.addedToTree(d)) {
         this.drawTree();
+        setTimeout(() => {
+          this.zoomFit();
+        }, 100);
       }
     };
 
@@ -74,7 +79,6 @@ export default class Banner extends Vue {
       this.expandedNodes[nodeId] = nodeId;
       if (node.children) {
         const drawableNodes = node.children.nodes.filter(n => {
-          console.log("node", n.id, !this.drawnNodes[n.id]);
           return !this.drawnNodes[n.id];
         });
         this.nodes.push(...drawableNodes);
@@ -100,8 +104,10 @@ export default class Banner extends Vue {
       .attr("viewBox", `0 0 ${this.width} ${this.height}`);
 
     const drawGroup = skillTreeSvg.append("g");
+    this.drawnGroup = drawGroup;
+    this.zoomBehaviour = zoom();
     skillTreeSvg.call(
-      zoom().on("zoom", () => {
+      this.zoomBehaviour.on("zoom", () => {
         drawGroup.attr("transform", event.transform);
       })
     );
@@ -148,6 +154,32 @@ export default class Banner extends Vue {
       .selectAll(".skillNode");
 
     this.drawTree();
+  }
+
+  zoomFit() {
+    const bounds = this.drawnGroup.node().getBBox();
+    const parent = this.drawnGroup.node().parentElement;
+    const fullWidth = parent.clientWidth,
+      fullHeight = parent.clientHeight;
+    const width = bounds.width,
+      height = bounds.height;
+    const midX = bounds.x + width / 2,
+      midY = bounds.y + height / 2;
+    if (width == 0 || height == 0) return;
+    const scale = 0.75 / Math.max(width / fullWidth, height / fullHeight);
+    const translate = [
+      fullWidth / 2 - scale * midX,
+      fullHeight / 2 - scale * midY
+    ];
+
+    const transform = zoomIdentity
+      .translate(translate[0], translate[1])
+      .scale(scale);
+
+    this.drawnGroup
+      .transition()
+      .duration(250)
+      .call(this.zoomBehaviour.transform, transform);
   }
 
   drawTree() {
