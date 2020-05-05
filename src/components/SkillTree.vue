@@ -14,12 +14,9 @@ import {
   forceCenter,
   forceLink,
   forceManyBody,
-  forceSimulation,
-  forceX,
-  forceY
+  forceSimulation
 } from "d3-force";
-import { zoom, zoomIdentity } from "d3-zoom";
-import link from "vue-router/src/components/link";
+import { zoom } from "d3-zoom";
 import {
   initialDrawnNodes,
   initialSkillLinks,
@@ -32,8 +29,8 @@ import {
 export default class Banner extends Vue {
   private nodes = initialSkillNodes;
   private links = initialSkillLinks;
-  private expandedNodes = {};
-  private drawnNodes = initialDrawnNodes;
+  private expandedNodes: { [key: string]: any } = {};
+  private drawnNodes: { [key: string]: any } = initialDrawnNodes;
 
   private width = 500;
   private height = 500;
@@ -43,19 +40,19 @@ export default class Banner extends Vue {
   private drawnGroup: any;
   private zoomBehaviour: any;
 
-  nodeDrag = simulation => {
-    const dragstarted = d => {
+  nodeDrag = (simulation: any) => {
+    const dragstarted = (d: any) => {
       if (!event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x;
       d.fy = d.y;
     };
 
-    const dragged = d => {
+    const dragged = (d: any) => {
       d.fx = event.x;
       d.fy = event.y;
     };
 
-    const dragended = d => {
+    const dragended = (d: any) => {
       if (!event.active) simulation.alphaTarget(0);
       d.fx = null;
       d.fy = null;
@@ -75,14 +72,14 @@ export default class Banner extends Vue {
     if (!this.expandedNodes[nodeId]) {
       this.expandedNodes[nodeId] = nodeId;
       if (node.children) {
-        const drawableNodes = node.children.nodes.filter(n => {
+        const drawableNodes = node.children.nodes.filter((n: any) => {
           return !this.drawnNodes[n.id];
         });
         this.nodes.push(...drawableNodes);
         this.links.push(...node.children.links);
         this.drawnNodes = {
           ...this.drawnNodes,
-          ...drawableNodes.reduce((a, n) => {
+          ...drawableNodes.reduce((a: any, n: any) => {
             a[n.id] = n.id;
             return a;
           }, {})
@@ -111,12 +108,14 @@ export default class Banner extends Vue {
 
     const centerX = this.width / 2;
     const centerY = this.height / 2;
+    /* eslint-disable  */
+    // @ts-ignore
     this.simulation = forceSimulation(this.nodes)
       .force(
         "link",
         forceLink(this.links)
-          .id(d => d.id)
-          .distance(d => d.distance || 150)
+          .id((d: any) => d.id)
+          .distance((d: any) => d.distance || 150)
       )
       .force(
         "charge",
@@ -128,12 +127,12 @@ export default class Banner extends Vue {
 
     this.simulation.on("tick", () => {
       this.link
-        .attr("x1", d => d.source.x)
-        .attr("y1", d => d.source.y)
-        .attr("x2", d => d.target.x)
-        .attr("y2", d => d.target.y);
+        .attr("x1", (d: any) => d.source.x)
+        .attr("y1", (d: any) => d.source.y)
+        .attr("x2", (d: any) => d.target.x)
+        .attr("y2", (d: any) => d.target.y);
 
-      this.node.attr("x", d => d.x - 30).attr("y", d => d.y - 30);
+      this.node.attr("x", (d: any) => d.x - 30).attr("y", (d: any) => d.y - 30);
     });
 
     this.link = drawGroup
@@ -151,27 +150,27 @@ export default class Banner extends Vue {
       .selectAll(".skillNode");
 
     this.drawTree();
+    /* eslint-enable */
   }
 
   drawTree() {
     // Apply the general update pattern to the nodes.
-    this.node = this.node.data(this.nodes, function(d) {
-      return d.id;
-    });
+    this.node = this.node.data(this.nodes, (d: any) => d.id);
     this.node.exit().remove();
     this.node = this.node
       .enter()
       .append("svg")
       .attr("class", "skillNode")
-      .html(d => d.icon)
+      .html((d: any) => d.icon)
       .merge(this.node)
       .call(this.nodeDrag(this.simulation));
 
-    this.node.append("title").text(d => d.id);
+    this.node.append("title").text((d: any) => d.id);
     // Apply the general update pattern to the links.
-    this.link = this.link.data(this.links, function(d) {
-      return d.source.id + "-" + d.target.id;
-    });
+    this.link = this.link.data(
+      this.links,
+      (d: any) => d.source.id + "-" + d.target.id
+    );
     this.link.exit().remove();
     this.link = this.link
       .enter()
