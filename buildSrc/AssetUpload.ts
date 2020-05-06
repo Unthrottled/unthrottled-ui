@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 import FileType from "file-type";
 import {
-  assetDirectories, assetDirectory,
+  assetDirectories,
+  assetDirectory,
   BUCKET_NAME,
   buildS3Client,
   createChecksum,
@@ -27,12 +28,15 @@ const uploadUnsyncedAssets = (
   if (next) {
     const [filePath] = next;
     return FileType.fromFile(filePath)
-      .then(fileType => {
+      .then((fileType: any) => {
         if (!fileType && filePath.endsWith(".xml")) {
           return { mime: "application/xml" };
         }
 
-        if (!fileType && (filePath.endsWith(".map") || filePath.endsWith(".txt") )) {
+        if (
+          !fileType &&
+          (filePath.endsWith(".map") || filePath.endsWith(".txt"))
+        ) {
           return { mime: "text/plain" };
         }
 
@@ -48,21 +52,20 @@ const uploadUnsyncedAssets = (
           return { mime: "application/json" };
         }
 
-
         if (!fileType && filePath.endsWith(".js")) {
           return { mime: "application/javascript" };
         }
 
-        if(!fileType){
+        if (!fileType) {
           throw Error(`File ${filePath} does not have a type!!`);
         }
 
         return fileType;
       })
-      .then(fileType => {
+      .then((fileType: any) => {
         return new Promise<boolean>(res => {
           const fileStream = fs.createReadStream(filePath);
-          fileStream.on("error", err => {
+          fileStream.on("error", (err: any) => {
             console.warn(
               `Unable to open stream for ${next} for raisins ${err}`
             );
@@ -206,6 +209,4 @@ Promise.all(scanDirectories())
       });
   });
 
-export function yeet() {
-
-}
+export function yeet() {}
