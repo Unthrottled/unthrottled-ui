@@ -6,11 +6,12 @@
       </div>
       <div class="more-details">
         <p>
-          If anything needs to be done, go all in or do not do anything at all.
-          There is no point in doing something half way. It is wasted effort
-          that could have been directed to what really matters. We are wired to
-          think we can do many things at once. However, we are really bad at
-          something that makes us feel good about ourselves.
+          If anything needs to be done, go all in or don't do anything at all.
+          There is no point in doing one or many things half way. That is just
+          wasted effort. Which have been directed to fully directed to problems
+          that matter. In all fairness, we are wired to reward ourselves for
+          multi-tasking. However, we are really bad at something that makes us
+          feel good about ourselves.
         </p>
         <p>
           Eliminating all distractions, only focusing on the task at hand, and
@@ -18,21 +19,21 @@
           never thought possible.
         </p>
         <p>
-          The only thing to keep in mind is that it is an investment in your
-          time and effort. You have the ability to increase your capacity to
-          expend effort, but you cannot get more time. Yes, you can increase
-          your lifespan to a certain extent by maintaining good health. However,
-          this pales in comparison to how much you can increase other things in
-          you life.
+          The only thing to keep in mind is that this is an investment in your
+          time and effort. Good news, you do have the ability to increase your
+          capacity to expend effort. Unfortunately you cannot get more time.
+          Yes, you can increase your lifespan to a certain extent by maintaining
+          good health. However, this pales in comparison to the magnitude of
+          other things which can be increased.
         </p>
         <p>
           I have dedicated my time and effort to achieving things I never
           thought possible. This in turn has made me really good at the things I
           deem valuable. I am also aware that almost every other person also
           thinks that they are greatest at what they do as well. So my
-          standpoint is not unique. However, what set me apart from others my
-          capacity to finish really difficult things. Tasks that take an amazing
-          amount of time, effort, and persistence.
+          standpoint is not very unique. However, what does set me apart from
+          others is my capacity to finish really difficult things. Tasks that
+          take an amazing amount of time, effort, and persistence.
         </p>
         <p>
           If you want to see what I am talking about. Take a look at how I've
