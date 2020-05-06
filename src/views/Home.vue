@@ -4,22 +4,20 @@
       <span style="opacity: 0">and his name is John Cena!</span>
       <Banner :on-animate="onBannerDisplay" />
       <transition appear name="fade" v-on:after-enter="excerptShown">
-        <h1 class="excerpt" v-if="bannerDisplayed">
-          Focus on what is important<br />
-          and demand excellence.
-        </h1>
-      </transition>
-      <transition appear name="fade" v-on:after-enter="triggerClosingLineShown">
-        <h1 class="excerpt" v-if="exceptShown">
-          Deliver amazing value.
-        </h1>
-      </transition>
-      <transition appear name="fade">
-        <p class="preachySpeachy" v-if="closingLineShown">
-          Why would you settle for anything less?<br /><br />
-          Never let anything prevent you from achieving your goals. What you
-          want to do is possible given time, effort, and reason.
-        </p>
+        <div class="stuff-u" v-if="bannerDisplayed">
+          <div class="bottom-caption">
+            <span>Focus</span> on what is important<br />
+            and <span>demand excellence</span>.
+          </div>
+          <div class="bottom-caption">
+            <span>Deliver</span> amazing <span>value</span>.
+          </div>
+          <p class="preachySpeachy">
+            Why would you settle for anything less?<br /><br />
+            Never let anything prevent you from achieving your goals. What you
+            want to do is possible given time, effort, and reason.
+          </p>
+        </div>
       </transition>
     </div>
   </Layout>
@@ -31,13 +29,15 @@
   max-width: 500px;
 }
 
+.stuff-u {
+}
 .highlight {
   color: #fff;
-  font-weight: 500;
 }
 
-.excerpt {
+.bottom-caption {
   margin-top: 3rem;
+  font-size: 2rem;
 }
 
 .preachySpeachy {
@@ -80,9 +80,6 @@ export default class Home extends Vue {
 
   private excerptShown() {
     setTimeout(() => this.setExceptShown(true), 1250);
-  }
-  private triggerClosingLineShown() {
-    setTimeout(() => this.setClosingLineShown(true), 1000);
   }
 
   private onBannerDisplay() {

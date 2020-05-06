@@ -133,7 +133,7 @@ export default class Navigation extends Vue {
   a {
     color: #f5f5f7;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: 200;
 
     svg {
       fill: #f5f5f7;
