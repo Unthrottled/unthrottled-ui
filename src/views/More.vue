@@ -141,6 +141,7 @@
   font-size: 1.5rem;
   text-decoration: none;
   color: #e8ad4f;
+  word-break: break-all;
 }
 
 .more {

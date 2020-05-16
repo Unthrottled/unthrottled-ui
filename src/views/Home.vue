@@ -46,6 +46,7 @@
   line-height: 2rem;
   font-weight: 400;
   color: #b2b2b4;
+  margin-bottom: 4rem;
 }
 </style>
 
