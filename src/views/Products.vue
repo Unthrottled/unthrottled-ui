@@ -5,10 +5,9 @@
         <div class="productIconContainer">
           <div>
             <svg
-              height="270"
+              style="width: 100%; height: 100%; max-height: 270px;"
               version="1.1"
               viewBox="0 0 65.801 71.437"
-              width="248.7"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -95,8 +94,7 @@
         <div class="productIconContainer">
           <div>
             <svg
-              width="205.14"
-              height="224.06"
+              style="width: 100%; height: 100%; max-height: 270px;"
               version="1.1"
               viewBox="0 0 54.275 59.281"
               xmlns="http://www.w3.org/2000/svg"
@@ -479,10 +477,8 @@
         <div class="productIconContainer">
           <div>
             <svg
-              height="224.06"
-              version="1.1"
               viewBox="0 0 54.275 59.281"
-              width="205.14"
+              style="width: 100%; height: 100%; max-height: 270px;"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -536,10 +532,8 @@
         <div class="productIconContainer">
           <div>
             <svg
-              height="224.06"
-              version="1.1"
+              style="width: 100%; height: 100%; max-height: 270px;"
               viewBox="0 0 54.275 59.281"
-              width="205.14"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -593,10 +587,8 @@
         <div class="productIconContainer">
           <div>
             <svg
-              height="224.06"
-              version="1.1"
+              style="width: 100%; height: 100%; max-height: 270px;"
               viewBox="0 0 54.275 59.281"
-              width="205.14"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:cc="http://creativecommons.org/ns#"
               xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -693,6 +685,7 @@
 .productLink {
   text-decoration: none;
   color: #e8ad4f;
+  word-break: break-word;
 }
 
 .dokiTools {

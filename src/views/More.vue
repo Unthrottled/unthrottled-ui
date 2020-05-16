@@ -128,7 +128,7 @@
 }
 
 .social-links {
-  margin-top: 2rem;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-evenly;
 }
