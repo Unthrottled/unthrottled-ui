@@ -34,8 +34,8 @@
                 </router-link>
               </div>
               <div class="navigationTab">
-                <router-link class="navigationLink" to="/services"
-                  ><span class="navigationLinkText">Services</span>
+                <router-link class="navigationLink" to="/skills"
+                  ><span class="navigationLinkText">Skills</span>
                   <div class="routerIcon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
