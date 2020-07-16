@@ -2,28 +2,20 @@
   <Layout>
     <div class="services">
       <div class="service-hero-headline">
-        Give your ideas life.
+        What can I do?
       </div>
       <div>
         <p class="service-description">
-          Whether you need something new or work done to an existing product. I
-          have a solution for you. If involves a computer, then I may be part of
-          that solution. <br /><br />When you are ready to put your business in
-          capable hands, look no further.
+          Let's try something a little different. Rather than reading an
+          exhaustive list of all of my abilities, why not have a little bit of
+          fun?
         </p>
-
-        <p>
-          To see if we right fit for each other, contact Alex Simons via:
-        </p>
-        <a class="servicesLink" href="mailto:contact@unthrottled.io"
-          >contact@unthrottled.io</a
-        >
         <p class="service-description">
-          If you already know what you are looking for already feel free to
-          explore my skill tree.
+          Below is my interactive skill tree that you can explore!
         </p>
         <p>
-          You can click each node to expand the branch.
+          You can click each node to expand the branch. Nodes can be dragged.
+          You also can pan/zoom around the tree
         </p>
         <SkillTree />
       </div>
