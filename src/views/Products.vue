@@ -62,7 +62,7 @@
           <div class="dokiTools">
             <div class="dokiTool">
               <a
-                href="https://github.com/Unthrottled/doki-theme-hyper"
+                href="https://github.com/doki-theme/doki-theme-hyper"
                 target="_blank"
               >
                 <svg fill="none" height="60" width="63">
@@ -103,7 +103,7 @@
             </div>
             <div class="dokiTool">
               <a
-                href="https://github.com/Unthrottled/doki-theme-jetbrains"
+                href="https://github.com/doki-theme/doki-theme-jetbrains"
                 target="_blank"
               >
                 <svg
@@ -249,7 +249,7 @@
             </div>
             <div class="dokiTool">
               <a
-                href="https://github.com/Unthrottled/doki-theme-vscode"
+                href="https://github.com/doki-theme/doki-theme-vscode"
                 target="_blank"
               >
                 <svg
@@ -387,7 +387,7 @@
           <div class="dokiTools" style="margin-top: 2rem">
             <div class="dokiTool">
               <a
-                href="https://github.com/Unthrottled/doki-theme-github"
+                href="https://github.com/doki-theme/doki-theme-github"
                 target="_blank"
               >
                 <svg
@@ -402,6 +402,7 @@
                   y="0px"
                   viewBox="0 0 2350 2314.8"
                   xml:space="preserve"
+                  fill="#fff"
                 >
                   <path
                     d="M1175,0C525.8,0,0,525.8,0,1175c0,552.2,378.9,1010.5,890.1,1139.7c-5.9-14.7-8.8-35.3-8.8-55.8v-199.8H734.4
@@ -417,7 +418,7 @@
             </div>
             <div class="dokiTool">
               <a
-                href="https://github.com/Unthrottled/doki-theme-eclipse"
+                href="https://github.com/doki-theme/doki-theme-eclipse"
                 target="_blank"
               >
                 <svg
@@ -494,7 +495,7 @@
             </div>
             <div class="dokiTool">
               <a
-                href="https://github.com/Unthrottled/doki-theme-vim"
+                href="https://github.com/doki-theme/doki-theme-vim"
                 target="_blank"
               >
                 <svg
@@ -611,6 +612,16 @@
                     </g>
                   </g>
                 </svg>
+              </a>
+            </div>
+          </div>
+          <div class="dokiTools" style="margin-top: 2rem">
+            <div class="dokiTool" style="margin: auto">
+              <a
+                href="https://github.com/doki-theme/doki-theme-chrome"
+                target="_blank"
+              >
+                <img :src="chrome" />
               </a>
             </div>
           </div>
@@ -882,6 +893,11 @@ import Layout from "../components/Layout";
 
 export default {
   name: "Home",
-  components: { Layout }
+  components: { Layout },
+  data() {
+    return {
+      chrome: require("../assets/chrome.svg")
+    };
+  }
 };
 </script>
