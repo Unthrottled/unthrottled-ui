@@ -56,6 +56,10 @@ const uploadUnsyncedAssets = (
           return { mime: "application/javascript" };
         }
 
+        if (!fileType && filePath.endsWith(".svg")) {
+          return { mime: "image/svg+xml" };
+        }
+
         if (!fileType) {
           throw Error(`File ${filePath} does not have a type!!`);
         }
