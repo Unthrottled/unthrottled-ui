@@ -8,10 +8,10 @@
         <p>
           If anything needs to be done, go all in or don't do anything at all.
           There is no point in doing one or many things half way. That is just
-          wasted effort. Which have been directed to fully directed to problems
-          that matter. In all fairness, we are wired to reward ourselves for
-          multi-tasking. However, we are really bad at something that makes us
-          feel good about ourselves.
+          wasted effort. Effort which could have been directed to fully directed
+          to problems that matter. In all fairness, we are wired to reward
+          ourselves for multi-tasking. However, we are really bad at something
+          that makes us feel good about ourselves.
         </p>
         <p>
           Eliminating all distractions, only focusing on the task at hand, and
@@ -35,18 +35,6 @@
           others is my capacity to finish really difficult things. Tasks that
           take an amazing amount of time, effort, and persistence.
         </p>
-        <p>
-          If you want to see what I am talking about. Take a look at how I've
-          spent my time via my SOGoS history dashboard. For fun, choose a random
-          day in my past and just look at what an average day for me contains.
-        </p>
-        <a
-          class="dashboardLink"
-          href="https://sogos.unthrottled.io/dashboard/alex"
-          target="_blank"
-        >
-          https://sogos.unthrottled.io/dashboard/alex
-        </a>
       </div>
       <div class="social-links">
         <div>
