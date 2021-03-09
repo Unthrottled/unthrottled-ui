@@ -54,7 +54,7 @@
           <img
             alt="Doki Theme for JetBrains IDEs preview"
             class="productImage"
-            src="https://github.com/doki-theme/doki-theme-jetbrains/raw/master/assets/screenshots/flagship_themes.gif"
+            src="https://github.com/doki-theme/doki-theme-jetbrains/raw/master/assets/screenshots/themes.webp"
           />
           <p class="productTagline">
             Available for your <span class="highlight">favorite</span> tools!
