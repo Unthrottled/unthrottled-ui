@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "sync": "ts-node --project buildSrc/tsconfig.json buildSrc/AssetUpload.ts",
+    "upload": "ts-node --project buildSrc/tsconfig.json buildSrc/AssetUpload.ts",
     "release": "yarn build && yarn sync",
     "start": "vue-cli-service serve --host 0.0.0.0 --port 3100",
     "build": "vue-cli-service build",
