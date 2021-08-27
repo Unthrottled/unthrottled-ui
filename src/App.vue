@@ -97,7 +97,7 @@ export default class App extends Vue {
     ctx.clearRect(0, 0, w, h);
     ctx.beginPath();
     ctx.moveTo(0, h * 0.85);
-    ctx.quadraticCurveTo(w / 1.85, h, w, 0);
+    ctx.quadraticCurveTo(w / 1.85, h, w, h / 2);
     ctx.lineTo(w, h);
     ctx.lineTo(0, h);
     ctx.fillStyle = "#282f35";
