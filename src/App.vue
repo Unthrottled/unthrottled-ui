@@ -1,17 +1,17 @@
 <template>
   <div class="iAmRoot">
     <Navigation />
-    <div class="main" id="main">
+    <div id="primary-container">
       <canvas
         id="backgroundImage"
         :width="backgroundWidth"
         :height="backgroundHeight"
       ></canvas>
-      <div id="app">
+      <main class="main" id="app">
         <transition mode="out-in" name="component-fade">
           <router-view />
         </transition>
-      </div>
+      </main>
     </div>
   </div>
 </template>
@@ -23,6 +23,10 @@ body {
 }
 
 .iAmRoot {
+  height: 100%;
+}
+
+#primary-container {
   height: 100%;
 }
 
@@ -78,7 +82,7 @@ export default class App extends Vue {
   }
 
   private updateSize() {
-    const mainCanvas = document.getElementById("main");
+    const mainCanvas = document.getElementById("primary-container");
     if (mainCanvas) {
       const boundingRect = mainCanvas.getBoundingClientRect();
       this.backgroundHeight = boundingRect.height;

@@ -12,24 +12,24 @@ const routes: Array<RouteConfig> = [
     component: () => import("../views/Home.vue")
   },
   {
-    path: "/waifus",
-    name: "Waifus",
-    component: () => import("../views/Waifu.vue")
-  },
-  {
     path: "/products",
     name: "Products",
     component: () => import("../views/Products.vue")
   },
   {
-    path: "/skills",
-    name: "Skills",
-    component: () => import("../views/Services.vue")
+    path: "/capabilities",
+    name: "Capabilities",
+    component: () => import("../views/Capabilities.vue")
   },
   {
-    path: "/more",
-    name: "More",
-    component: () => import("../views/More.vue")
+    path: "/values",
+    name: "Values",
+    component: () => import("../views/Values.vue")
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import("../views/Contact.vue")
   },
   {
     path: "/**",

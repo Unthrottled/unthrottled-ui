@@ -17,6 +17,11 @@
             Never let anything prevent you from achieving your goals. What you
             want to do is possible given time, effort, and reason.
           </p>
+          <p class="more-details">
+            <router-link class="link" to="/capabilities">
+              <span class="link"> Learn how I can help. </span>
+            </router-link>
+          </p>
         </div>
       </transition>
     </div>
@@ -35,6 +40,12 @@
   color: #fff;
 }
 
+.link {
+  text-decoration: none;
+  color: #e8ad4f;
+  font-size: 1.25rem;
+}
+
 .bottom-caption {
   margin-top: 3rem;
   font-size: 2rem;
@@ -46,7 +57,7 @@
   line-height: 2rem;
   font-weight: 400;
   color: #b2b2b4;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 </style>
 
@@ -62,8 +73,8 @@ const Animations = namespace("animations");
 @Component({
   components: {
     Layout,
-    Banner: Banner
-  }
+    Banner: Banner,
+  },
 })
 export default class Home extends Vue {
   @Animations.State

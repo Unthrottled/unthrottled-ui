@@ -8,7 +8,7 @@
         <div class="productIconContainer">
           <div>
             <svg
-              style="width: 100%; height: 100%; max-height: 270px;"
+              style="width: 100%; height: 100%; max-height: 270px"
               version="1.1"
               viewBox="0 0 54.275 59.281"
               xmlns="http://www.w3.org/2000/svg"
@@ -17,13 +17,13 @@
                 d="m52.577 14.952c1.9095 3.3073 1.9095 26.069 0 29.375-1.9095 3.3069-21.623 14.688-25.441 14.688-3.8189 0-23.532-11.381-25.441-14.688-1.9095-3.3073-1.9095-26.069 0-29.375 1.9095-3.3073 21.623-14.688 25.441-14.688 3.8189 0 23.532 11.381 25.441 14.688z"
                 fill="#152b48"
                 stroke-width=".1248"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
               />
               <path
                 d="m45.854 9.5987c0.03873 0.10755 0.07804 0.21489 0.1142 0.3235 0.73834 0.6891-6.4579 32.416-45.09 26.5-0.17914-0.54128-0.34649-1.074-0.5085-1.603 0.18835 4.4957 0.62782 8.3007 1.3245 9.5074 1.909 3.307 21.623 14.688 25.441 14.688 3.8182 0 23.532-11.381 25.441-14.688 1.9095-3.3059 1.9095-26.068 0-29.376-0.6433-1.1144-3.3263-3.1501-6.7235-5.3535z"
                 fill="#0e1d31"
                 stroke-width=".1248"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
               />
               <path
                 d="m27.363 21.738c0.86641-0.47597 3.7877-2.4016 8.056-3.3763 9.8408-2.2472 13.623 8.603 7.8207 16.785-5.1841 5.953-10.565 8.6876-15.877 12.21-5.3114-3.5223-10.692-6.257-15.877-12.21-5.8028-8.1814-2.02-19.031 7.8207-16.785 4.2683 0.97466 7.1895 2.9003 8.056 3.3763"
@@ -33,38 +33,38 @@
                 stroke-linecap="round"
                 stroke-miterlimit="6"
                 stroke-width="2.7087"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
               />
               <path
                 transform="matrix(.26458 0 0 .26458 -.00010697 0)"
                 d="m161.03 73.684c-15.8 27.92-48.546 62.403-110.91 66.361 17.508 17.666 35.507 27.145 53.301 38.945 20.077-13.313 40.414-23.648 60.008-46.148 15.276-21.541 12.97-47.97-2.4024-59.158z"
                 fill="#0e1d31"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
               />
             </svg>
           </div>
           <div class="productExcerpt">
             <h1 class="productHeadline">Doki Theme</h1>
-            <h4 class="caption">
-              Code with your Waifu!
-            </h4>
+            <h4 class="caption">Code with anime girls!</h4>
           </div>
         </div>
         <div>
           <img
             alt="Doki Theme for JetBrains IDEs preview"
             class="productImage"
-            src="https://github.com/doki-theme/doki-theme-jetbrains/raw/master/assets/screenshots/themes.webp"
+            src="https://github.com/doki-theme/doki-theme-jetbrains/raw/master/assets/screenshots/franxx/zero_two_dark_code.png"
           />
           <p class="productTagline">
-            Available for your <span class="highlight">favorite</span> tools!
+            Over <span class="highlight">65 themes</span> available for your
+            <span class="highlight">favorite</span> tools!
           </p>
           <p class="productTagline" style="margin-bottom: 2.5rem">
-                        <a
+            <a
               class="productLink"
               href="https://doki-theme.unthrottled.io"
               target="_blank"
-              >https://doki-theme.unthrottled.io</a>
+              >https://doki-theme.unthrottled.io</a
+            >
           </p>
           <div class="dokiTools">
             <div class="dokiTool">
@@ -116,7 +116,7 @@
                 <svg
                   height="70px"
                   id="Layer_1"
-                  style="enable-background:new 0 0 70 70;"
+                  style="enable-background: new 0 0 70 70"
                   version="1.1"
                   viewBox="0 0 70 70"
                   width="70px"
@@ -136,15 +136,15 @@
                         y1="40.0893"
                         y2="40.0893"
                       >
-                        <stop offset="0.2581" style="stop-color:#F97A12" />
-                        <stop offset="0.4591" style="stop-color:#B07B58" />
-                        <stop offset="0.7241" style="stop-color:#577BAE" />
-                        <stop offset="0.9105" style="stop-color:#1E7CE5" />
-                        <stop offset="1" style="stop-color:#087CFA" />
+                        <stop offset="0.2581" style="stop-color: #f97a12" />
+                        <stop offset="0.4591" style="stop-color: #b07b58" />
+                        <stop offset="0.7241" style="stop-color: #577bae" />
+                        <stop offset="0.9105" style="stop-color: #1e7ce5" />
+                        <stop offset="1" style="stop-color: #087cfa" />
                       </linearGradient>
                       <polygon
                         points="17.7,54.6 0.8,41.2 9.2,25.6 33.3,35 		"
-                        style="fill:url(#SVGID_1_);"
+                        style="fill: url(#SVGID_1_)"
                       />
                       <linearGradient
                         gradientUnits="userSpaceOnUse"
@@ -154,23 +154,23 @@
                         y1="24.88"
                         y2="54.57"
                       >
-                        <stop offset="0" style="stop-color:#F97A12" />
+                        <stop offset="0" style="stop-color: #f97a12" />
                         <stop
                           offset="7.179946e-002"
-                          style="stop-color:#CB7A3E"
+                          style="stop-color: #cb7a3e"
                         />
-                        <stop offset="0.1541" style="stop-color:#9E7B6A" />
-                        <stop offset="0.242" style="stop-color:#757B91" />
-                        <stop offset="0.3344" style="stop-color:#537BB1" />
-                        <stop offset="0.4324" style="stop-color:#387CCC" />
-                        <stop offset="0.5381" style="stop-color:#237CE0" />
-                        <stop offset="0.6552" style="stop-color:#147CEF" />
-                        <stop offset="0.7925" style="stop-color:#0B7CF7" />
-                        <stop offset="1" style="stop-color:#087CFA" />
+                        <stop offset="0.1541" style="stop-color: #9e7b6a" />
+                        <stop offset="0.242" style="stop-color: #757b91" />
+                        <stop offset="0.3344" style="stop-color: #537bb1" />
+                        <stop offset="0.4324" style="stop-color: #387ccc" />
+                        <stop offset="0.5381" style="stop-color: #237ce0" />
+                        <stop offset="0.6552" style="stop-color: #147cef" />
+                        <stop offset="0.7925" style="stop-color: #0b7cf7" />
+                        <stop offset="1" style="stop-color: #087cfa" />
                       </linearGradient>
                       <polygon
                         points="70,18.7 68.7,59.2 41.8,70 25.6,59.6 49.3,35 38.9,12.3 48.2,1.1 		"
-                        style="fill:url(#SVGID_2_);"
+                        style="fill: url(#SVGID_2_)"
                       />
                       <linearGradient
                         gradientUnits="userSpaceOnUse"
@@ -180,23 +180,23 @@
                         y1="42.9153"
                         y2="-1.7191"
                       >
-                        <stop offset="0" style="stop-color:#FE315D" />
+                        <stop offset="0" style="stop-color: #fe315d" />
                         <stop
                           offset="7.840246e-002"
-                          style="stop-color:#CB417E"
+                          style="stop-color: #cb417e"
                         />
-                        <stop offset="0.1601" style="stop-color:#9E4E9B" />
-                        <stop offset="0.2474" style="stop-color:#755BB4" />
-                        <stop offset="0.3392" style="stop-color:#5365CA" />
-                        <stop offset="0.4365" style="stop-color:#386DDB" />
-                        <stop offset="0.5414" style="stop-color:#2374E9" />
-                        <stop offset="0.6576" style="stop-color:#1478F3" />
-                        <stop offset="0.794" style="stop-color:#0B7BF8" />
-                        <stop offset="1" style="stop-color:#087CFA" />
+                        <stop offset="0.1601" style="stop-color: #9e4e9b" />
+                        <stop offset="0.2474" style="stop-color: #755bb4" />
+                        <stop offset="0.3392" style="stop-color: #5365ca" />
+                        <stop offset="0.4365" style="stop-color: #386ddb" />
+                        <stop offset="0.5414" style="stop-color: #2374e9" />
+                        <stop offset="0.6576" style="stop-color: #1478f3" />
+                        <stop offset="0.794" style="stop-color: #0b7bf8" />
+                        <stop offset="1" style="stop-color: #087cfa" />
                       </linearGradient>
                       <polygon
                         points="70,18.7 48.7,43.9 38.9,12.3 48.2,1.1 		"
-                        style="fill:url(#SVGID_3_);"
+                        style="fill: url(#SVGID_3_)"
                       />
                       <linearGradient
                         gradientUnits="userSpaceOnUse"
@@ -206,34 +206,34 @@
                         y1="16.473"
                         y2="90.58"
                       >
-                        <stop offset="0" style="stop-color:#FE315D" />
+                        <stop offset="0" style="stop-color: #fe315d" />
                         <stop
                           offset="4.023279e-002"
-                          style="stop-color:#F63462"
+                          style="stop-color: #f63462"
                         />
-                        <stop offset="0.1037" style="stop-color:#DF3A71" />
-                        <stop offset="0.1667" style="stop-color:#C24383" />
-                        <stop offset="0.2912" style="stop-color:#AD4A91" />
-                        <stop offset="0.5498" style="stop-color:#755BB4" />
-                        <stop offset="0.9175" style="stop-color:#1D76ED" />
-                        <stop offset="1" style="stop-color:#087CFA" />
+                        <stop offset="0.1037" style="stop-color: #df3a71" />
+                        <stop offset="0.1667" style="stop-color: #c24383" />
+                        <stop offset="0.2912" style="stop-color: #ad4a91" />
+                        <stop offset="0.5498" style="stop-color: #755bb4" />
+                        <stop offset="0.9175" style="stop-color: #1d76ed" />
+                        <stop offset="1" style="stop-color: #087cfa" />
                       </linearGradient>
                       <polygon
                         points="33.7,58.1 5.6,68.3 10.1,52.5 16,33.1 0,27.7 10.1,0 32.1,2.7 53.7,27.4 		"
-                        style="fill:url(#SVGID_4_);"
+                        style="fill: url(#SVGID_4_)"
                       />
                     </g>
                     <g>
                       <rect
                         height="43.2"
-                        style="fill:#000000;"
+                        style="fill: #000000"
                         width="43.2"
                         x="13.7"
                         y="13.5"
                       />
                       <rect
                         height="2.7"
-                        style="fill:#FFFFFF;"
+                        style="fill: #ffffff"
                         width="16.2"
                         x="17.7"
                         y="48.6"
@@ -241,13 +241,13 @@
                       <polygon
                         points="29.4,22.4 29.4,19.1 20.4,19.1 20.4,22.4 23,22.4 23,33.7 20.4,33.7 20.4,37 29.4,37
 			29.4,33.7 26.9,33.7 26.9,22.4 		"
-                        style="fill:#FFFFFF;"
+                        style="fill: #ffffff"
                       />
                       <path
                         d="M38,37.3c-1.4,0-2.6-0.3-3.5-0.8c-0.9-0.5-1.7-1.2-2.3-1.9l2.5-2.8c0.5,0.6,1,1,1.5,1.3
 			c0.5,0.3,1.1,0.5,1.7,0.5c0.7,0,1.3-0.2,1.8-0.7c0.4-0.5,0.6-1.2,0.6-2.3V19.1h4v11.7c0,1.1-0.1,2-0.4,2.8c-0.3,0.8-0.7,1.4-1.3,2
 			c-0.5,0.5-1.2,1-2,1.2C39.8,37.1,39,37.3,38,37.3"
-                        style="fill:#FFFFFF;"
+                        style="fill: #ffffff"
                       />
                     </g>
                   </g>
@@ -299,7 +299,7 @@
                         fill="#1F9CF0"
                       />
                     </g>
-                    <g opacity="0.25" style="mix-blend-mode:overlay">
+                    <g opacity="0.25" style="mix-blend-mode: overlay">
                       <path
                         clip-rule="evenodd"
                         d="M181.378 254.252C185.41 255.822 190.008 255.722 194.077 253.764L246.783 228.402C252.322 225.737 255.844 220.132 255.844 213.983V42.0179C255.844 35.8687 252.322 30.2636 246.784 27.5986L194.077 2.23665C188.737 -0.333299 182.486 0.296177 177.798 3.70401C177.129 4.19083 176.491 4.73437 175.892 5.33337L74.9927 97.386L31.0429 64.0245C26.9517 60.9189 21.229 61.1734 17.4292 64.6298L3.33311 77.4523C-1.31478 81.6803 -1.32011 88.9925 3.3216 93.2273L41.4364 128L3.3216 162.773C-1.32011 167.008 -1.31478 174.32 3.33311 178.548L17.4292 191.37C21.229 194.827 26.9517 195.081 31.0429 191.976L74.9927 158.614L175.892 250.667C177.488 252.264 179.363 253.467 181.378 254.252ZM191.883 69.8851L115.323 128L191.883 186.115V69.8851Z"
@@ -500,13 +500,13 @@
                   transform="matrix(.86856 -.49558 .51589 .85665 0 0)"
                   d="m34.987 61.994a6.7012 2.5283 0 0 1-6.4423 2.5264 6.7012 2.5283 0 0 1-6.9402-2.3311 6.7012 2.5283 0 0 1 5.9058-2.7066 6.7012 2.5283 0 0 1 7.3967 2.1219"
                   fill="url(#radialGradient991-7)"
-                  style="mix-blend-mode:normal"
+                  style="mix-blend-mode: normal"
                 />
                 <path
                   transform="matrix(.98723 -.15932 .18251 .9832 0 0)"
                   d="m33.386 51.185a7.9932 3.0157 0 0 1-7.6843 3.0134 7.9932 3.0157 0 0 1-8.2782-2.7805 7.9932 3.0157 0 0 1 7.0444-3.2284 7.9932 3.0157 0 0 1 8.8227 2.531"
                   fill="url(#radialGradient991)"
-                  style="mix-blend-mode:normal"
+                  style="mix-blend-mode: normal"
                 />
               </g>
               <path
@@ -542,20 +542,23 @@
           </div>
           <div class="productExcerpt">
             <h1 class="productHeadline">Anime Memes</h1>
-            <h4 class="caption">
-              Write code and consume memes
-            </h4>
+            <h4 class="caption">Write code; consume memes</h4>
           </div>
         </div>
         <div>
           <p class="productTagline">
-            Give your IDE more personality and have more fun programming with the Anime Meme IDE Integration!
+            Give your IDE more personality and
+            <span class="highlight">have more fun</span> programming with the
+            Anime Meme IDE Integration!
           </p>
-          <p class="productTagline ">
-            Available for all <a 
-            class="productLink"
-            target="_blank"
-            href="https://plugins.jetbrains.com/plugin/15865-anime-memes/">JetBrains IDEs</a>
+          <p class="productTagline">
+            Available for all
+            <a
+              class="productLink"
+              target="_blank"
+              href="https://plugins.jetbrains.com/plugin/15865-anime-memes/"
+              >JetBrains IDEs</a
+            >
           </p>
           <img
             alt="Anime Meme plugin preview"
@@ -570,27 +573,27 @@
           <div>
             <svg
               viewBox="0 0 54.275 59.281"
-              style="width: 100%; height: 100%; max-height: 270px;"
+              style="width: 100%; height: 100%; max-height: 270px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="m49.736 30.143a22.105 22.105 0 0 1-22.031 22.105 22.105 22.105 0 0 1-22.179-21.956 22.105 22.105 0 0 1 21.881-22.252 22.105 22.105 0 0 1 22.326 21.807"
                 fill="#ededed"
                 stroke-width="0"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
               />
               <path
                 d="m102.56 0.99805c-14.431 0-88.941 43.015-96.158 55.516-7.2172 12.495-7.2172 98.525 0 111.03 7.2153 12.499 81.724 55.516 96.158 55.516 14.431 0 88.941-43.017 96.158-55.516 7.2172-12.495 7.2172-98.525 0-111.03-7.2153-12.499-81.724-55.516-96.158-55.516zm-41.264 41.732h17.123c10.036 0 17.756 2.123 23.16 6.3691 5.4594 4.2462 10.065 11.389 13.814 21.426l37.885 100.91h-29.613l-18.445-48.637-19.439 48.637h-29.613l35.818-84.373-5.1289-13.896c-1.544-4.2462-3.3634-7.1415-5.459-8.6855-2.0403-1.544-5.6542-2.3145-10.838-2.3145h-9.2637v-19.439z"
                 fill="#30373E"
                 stroke-width=".4717"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
                 transform="matrix(.26458 0 0 .26458 -.00010697 0)"
               />
               <path
                 d="m173.31 36.273v0.005859c0.14637 0.4065 0.29496 0.81214 0.43164 1.2227 1.6284 1.5198-6.969 42.977-43.41 72.809l22.949 61.129h-29.613l-17.332-45.703c-0.93341 0.46033-1.8726 0.91781-2.8301 1.3613l-17.723 44.342h-29.613l14.404-33.93c-18.983 3.5877-41.22 4.141-67.254 0.15429-0.67709-2.0458-1.3096-4.0594-1.9219-6.0586 0.71189 16.992 2.3728 31.373 5.0059 35.934 7.2154 12.499 81.724 55.518 96.158 55.518 14.431 0 88.943-43.018 96.16-55.518 7.2173-12.495 7.2173-98.526 0-111.03-2.4314-4.212-12.572-11.906-25.412-20.234z"
                 fill="#161a1d"
                 stroke-width=".47171"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
                 transform="matrix(.26458 0 0 .26458 -.00010697 0)"
               />
             </svg>
@@ -609,7 +612,7 @@
             great place to start your
             <span class="highlight">declarative</span> journey!
           </p>
-          <p class="productTagline ">
+          <p class="productTagline">
             <a
               class="productLink"
               href="https://learn-functional.unthrottled.io"
@@ -624,7 +627,7 @@
         <div class="productIconContainer">
           <div>
             <svg
-              style="width: 100%; height: 100%; max-height: 270px;"
+              style="width: 100%; height: 100%; max-height: 270px"
               viewBox="0 0 54.275 59.281"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -632,20 +635,20 @@
                 d="m49.736 30.143a22.105 22.105 0 0 1-22.031 22.105 22.105 22.105 0 0 1-22.179-21.956 22.105 22.105 0 0 1 21.881-22.252 22.105 22.105 0 0 1 22.326 21.807"
                 fill="#ffffff"
                 stroke-width="0"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
               />
               <path
                 d="m102.56 0.99805c-14.431 0-88.941 43.015-96.158 55.516-7.2172 12.495-7.2172 98.525 0 111.03 7.2153 12.499 81.724 55.516 96.158 55.516 14.431 0 88.941-43.017 96.158-55.516 7.2172-12.495 7.2172-98.525 0-111.03-7.2153-12.499-81.724-55.516-96.158-55.516zm-10.283 33.336h22.049v15.205a88.273 88.273 0 0 1 31.346 6.3047l-6.4844 25.799a79.808 79.808 0 0 0-32.066-7.207c-11.89 0-14.844 3.8907-14.844 7.6016 0 4.6479 7.9611 8.3589 24.463 12.971 25.798 7.2061 35.418 17.439 35.418 35.814 0 17.619-13.153 32.427-37.834 36.354v18.34l-21.758 0.14258v-16.682a97.605 97.605 0 0 1-37.436-9.0801l6.7012-26.697a88.128 88.128 0 0 0 37.074 9.2598c9.8361 0 17.26-2.2331 17.26-8.3223s-5.7655-8.7565-21.15-12.432c-21.618-5.2242-38.77-15.023-38.77-35.236 0-18.015 12.972-31.743 36.031-35.633v-16.502z"
                 fill="#f3c062"
                 stroke-width=".4717"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
                 transform="matrix(.26458 0 0 .26458 -.00010697 0)"
               />
               <path
                 d="m173.31 36.273v0.005859c0.14637 0.4065 0.29496 0.81214 0.43164 1.2227 1.5106 1.4099-5.7799 37.191-35.934 66.176 10.189 6.4965 14.352 15.059 14.352 27.145 0 17.619-13.153 32.427-37.834 36.354v18.34l-21.758 0.14258v-16.682a97.605 97.605 0 0 1-37.436-9.0801l5.2207-20.801c-16.631 2.048-35.534 1.8607-57.033-1.4316-0.67709-2.0458-1.3096-4.0594-1.9219-6.0586 0.71189 16.992 2.3728 31.373 5.0059 35.934 7.2154 12.499 81.724 55.518 96.158 55.518 14.431 0 88.943-43.018 96.16-55.518 7.2173-12.495 7.2173-98.526 0-111.03-2.4314-4.212-12.572-11.906-25.412-20.234zm-65.941 88.955c-10.351 5.2204-22.2 9.4218-35.721 12.076a88.128 88.128 0 0 0 27.26 5.1543c9.8361 0 17.26-2.2331 17.26-8.3223 0-4.048-2.5705-6.5837-8.7988-8.9082z"
                 fill="#ef9d11"
                 stroke-width=".47171"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
                 transform="matrix(.26458 0 0 .26458 -.00010697 0)"
               />
             </svg>
@@ -664,12 +667,13 @@
             <span class="highlight">production</span>
             on a budget!
           </p>
-          <p class="productTagline ">
+          <p class="productTagline">
             <a
               class="productLink"
               href="https://frugal-aws.unthrottled.io"
               target="_blank"
-              >https://frugal-aws.unthrottled.io</a>
+              >https://frugal-aws.unthrottled.io</a
+            >
           </p>
         </div>
       </div>
@@ -678,7 +682,7 @@
         <div class="productIconContainer">
           <div>
             <svg
-              style="width: 100%; height: 100%; max-height: 270px;"
+              style="width: 100%; height: 100%; max-height: 270px"
               viewBox="0 0 54.275 59.281"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:cc="http://creativecommons.org/ns#"
@@ -700,20 +704,20 @@
                 d="m49.736 30.143a22.105 22.105 0 0 1-22.031 22.105 22.105 22.105 0 0 1-22.179-21.956 22.105 22.105 0 0 1 21.881-22.252 22.105 22.105 0 0 1 22.326 21.807"
                 fill="#eeeeee"
                 stroke-width="0"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
               />
               <path
                 d="m102.56 0.99805c-14.431 0-88.941 43.015-96.158 55.516-7.2172 12.495-7.2172 98.525 0 111.03 7.2153 12.499 81.724 55.516 96.158 55.516 14.431 0 88.941-43.017 96.158-55.516 7.2172-12.495 7.2172-98.525 0-111.03-7.2153-12.499-81.724-55.516-96.158-55.516zm40.553 44.096c3.1034 0 6.207 1.1836 8.5742 3.5508l15.178 15.178c4.7344 4.7372 4.7344 12.414 0 17.148l-14.279 14.279-32.326-32.326 14.279-14.279c2.3674-2.3672 5.4708-3.5508 8.5742-3.5508zm-29.258 24.244 32.322 32.322-10.807 38.23c-1.4556 5.1489-5.365 9.2434-10.441 10.936l-70.668 23.557-3.7109-3.709 37.904-37.904c1.5805 0.75502 3.3287 1.2109 5.1973 1.2109 6.694 0 12.121-5.4251 12.121-12.119 0-6.694-5.4271-12.121-12.121-12.121-6.694 0-12.121 5.4271-12.121 12.121 0 1.8684 0.45786 3.6146 1.2129 5.1953l-37.904 37.904-3.709-3.709 23.557-70.67c1.6921-5.0764 5.7863-8.986 10.936-10.441l38.232-10.803z"
                 fill="#3b3f41ff"
                 stroke-width=".4717"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
                 transform="matrix(.26458 0 0 .26458 -.00010697 0)"
               />
               <path
                 d="m173.31 36.273v0.005859c0.14637 0.4065 0.29496 0.81214 0.43164 1.2227 0.81366 0.7594-0.93663 11.497-7.4277 25.768l0.55273 0.55274c4.7344 4.7372 4.7344 12.414 0 17.148l-14.279 14.279-3.7012-3.7012c-1.856 2.3083-3.8225 4.611-5.9316 6.8867l3.2246 3.2246-10.807 38.23c-1.4556 5.1489-5.365 9.2434-10.441 10.936l-70.668 23.557-3.7109-3.709 37.592-37.592c-4.8834 1.5671-10.029 2.9173-15.443 4.0195l-27.859 27.859-3.709-3.709 7.0273-21.084c-13.534 0.71257-28.43 0.00904-44.84-2.5039-0.67709-2.0458-1.3096-4.0594-1.9219-6.0586 0.71189 16.992 2.3728 31.373 5.0059 35.934 7.2154 12.499 81.724 55.518 96.158 55.518 14.431 0 88.943-43.018 96.16-55.518 7.2173-12.495 7.2173-98.526 0-111.03-2.4314-4.212-12.572-11.906-25.412-20.234zm-68.445 90.186c-5.029 2.4008-10.402 4.559-16.131 6.4258 1.5083 0.67953 3.1577 1.0957 4.9199 1.0957 5.0652 0 9.399-3.1093 11.211-7.5215z"
                 fill="#2a2e2e"
                 stroke-width=".47171"
-                style="paint-order:stroke fill markers"
+                style="paint-order: stroke fill markers"
                 transform="matrix(.26458 0 0 .26458 -.00010697 0)"
               />
             </svg>
@@ -731,7 +735,7 @@
             that exist and cannot be solved by a simple google search alone!
             Take a peek at what I have overcome.
           </p>
-          <p class="productTagline ">
+          <p class="productTagline">
             <a
               class="productLink"
               href="https://blog.unthrottled.io"
@@ -748,8 +752,10 @@
 
 <style lang="scss">
 .developerResourcesHeading {
+  font-size: 3rem;
+  margin-top: 2rem;
   font-weight: 300;
-  font-size: 2.5rem;
+  color: #fff;
 }
 
 .products {

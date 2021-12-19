@@ -1,17 +1,13 @@
 <template>
   <div>
     <div class="johnCena nav">
-      <router-link class="brand" to="/">
-        Unthrottled
-      </router-link>
+      <router-link class="brand" to="/"> Unthrottled </router-link>
     </div>
     <div class="navContainer">
       <div id="nav">
         <transition name="fade" style="position: absolute">
           <div class="navTransition">
-            <router-link class="brand" to="/">
-              Unthrottled
-            </router-link>
+            <router-link class="brand" to="/"> Unthrottled </router-link>
             <span style="flex-grow: 0.5" />
             <div class="navLinks">
               <div class="navigationTab">
@@ -34,8 +30,8 @@
                 </router-link>
               </div>
               <div class="navigationTab">
-                <router-link class="navigationLink" to="/skills"
-                  ><span class="navigationLinkText">Skills</span>
+                <router-link class="navigationLink" to="/capabilities"
+                  ><span class="navigationLinkText">Capabilities</span>
                   <div class="routerIcon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +49,18 @@
                 </router-link>
               </div>
               <div class="navigationTab">
-                <router-link class="navigationLink" to="/more">
-                  <span class="navigationLinkText">More</span>
+                <router-link class="navigationLink" to="/values">
+                  <span class="navigationLinkText">Values</span>
+                  <div class="routerIcon">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+</svg>
+                  </div>
+                </router-link>
+              </div>
+              <div class="navigationTab">
+                <router-link class="navigationLink" to="/contact">
+                  <span class="navigationLinkText">Contact</span>
                   <div class="routerIcon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,8 +105,7 @@ export default class Navigation extends Vue {
   transition: opacity 0.5s;
 }
 
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
- {
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 
@@ -137,6 +142,7 @@ export default class Navigation extends Vue {
 
     svg {
       fill: #f5f5f7;
+      vertical-align: middle;
     }
 
     &.router-link-exact-active {
@@ -147,6 +153,8 @@ export default class Navigation extends Vue {
     }
   }
 }
+
+
 
 .navTransition {
   display: flex;
