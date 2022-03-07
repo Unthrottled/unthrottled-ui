@@ -34,7 +34,7 @@ export default class Banner extends Vue {
   mounted() {
     setTimeout(() => {
       this.setBrandAnimationStarted(true);
-    }, 750);
+    }, 250);
   }
 }
 </script>

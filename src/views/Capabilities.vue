@@ -16,12 +16,11 @@
         </p>
         <h4>Observability</h4>
         <p>
-          Prometheus/Grafana Dashboards, JVM Profiling, Wireshark, D3.js,
-          Jupyter Notebook/Matplotlib
+          Prometheus/Grafana Dashboards, JVM Profiling, Wireshark
         </p>
         <hr />
         <h2>Frontend Tech</h2>
-        <p>Typescript, Javascript, React, Redux</p>
+        <p>Typescript, Javascript, React</p>
       </div>
       <p class="more-details">
         <router-link class="link" to="/contact">

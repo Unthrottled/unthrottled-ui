@@ -91,11 +91,11 @@ export default class Home extends Vue {
   private setClosingLineShown!: (value: boolean) => void;
 
   private excerptShown() {
-    setTimeout(() => this.setExceptShown(true), 1250);
+    this.setExceptShown(true);
   }
 
   private onBannerDisplay() {
-    setTimeout(() => this.setBannerDisplayed(true), 750);
+    this.setBannerDisplayed(true);
   }
 }
 </script>
