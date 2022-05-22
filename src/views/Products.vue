@@ -45,7 +45,7 @@
           </div>
           <div class="productExcerpt">
             <h1 class="productHeadline">Doki Theme</h1>
-            <h4 class="caption">Code with anime girls!</h4>
+            <h4 class="caption">Cute anime themes!</h4>
           </div>
         </div>
         <div>
@@ -838,8 +838,8 @@ export default {
   components: { Layout },
   data() {
     return {
-      chrome: require("../assets/chrome.svg"),
+      chrome: require("../assets/chrome.svg")
     };
-  },
+  }
 };
 </script>
