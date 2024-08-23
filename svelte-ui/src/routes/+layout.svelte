@@ -1,10 +1,14 @@
 <script>
 	import Header from './Header.svelte';
 	import '../app.css';
+	import Background from "$lib/Background.svelte";
 </script>
 
 <div class="app">
 	<Header />
+
+	<Background/>
+
 
 	<main>
 		<slot />
@@ -28,6 +32,7 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
+		height: 100%;
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
