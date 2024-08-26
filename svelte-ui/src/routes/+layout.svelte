@@ -15,44 +15,46 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer>
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
+	body {
 		height: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
+		margin: 0;
 	}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
+	.iAmRoot {
+		height: 100%;
 	}
 
-	footer a {
-		font-weight: bold;
+	#primary-container {
+		height: 100%;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+	.main {
+		height: 100%;
+		padding: 0.75rem;
+	}
+
+	#backgroundImage {
+		position: fixed;
+		z-index: -1;
+	}
+
+	#app {
+		margin: auto;
+		text-align: center;
+		height: 100%;
+		max-width: 980px;
+	}
+
+	.component-fade-enter-active,
+	.component-fade-leave-active {
+		transition: opacity 0.3s ease;
+	}
+	.component-fade-enter, .component-fade-leave-to
+		/* .component-fade-leave-active below version 2.1.8 */ {
+		opacity: 0;
 	}
 </style>
