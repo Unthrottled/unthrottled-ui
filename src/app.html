@@ -6,50 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
-	<style>
-		:root {
-			--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-			Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-			--font-mono: 'Fira Mono', monospace;
-			--color-bg-0: rgb(202, 216, 228);
-			--color-bg-1: hsl(209, 36%, 86%);
-			--color-bg-2: hsl(224, 44%, 95%);
-			--color-theme-1: #ff3e00;
-			--color-theme-2: #4075a6;
-			--color-text: rgba(0, 0, 0, 0.7);
-			--column-width: 42rem;
-			--column-margin-top: 4rem;
-			font-family: var(--font-body),serif;
-			color: var(--color-text);
-		}
-
-		html {
-			width: 100%;
-			height: 100%;
-			/*font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,*/
-			/*"Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif,*/
-			/*"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			background-color: #2b3238;
-			color: #e6e6e6;
-		}
-
-		::-moz-selection { background: #a730355a; color: #E2CB14; }
-		::selection { background: #a730355a; color: #E2CB14; }
-
-		*::-webkit-scrollbar {
-			width: 0.5em;
-		}
-
-		*::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.00);
-		}
-
-		*::-webkit-scrollbar-thumb {
-			background-color: #a7303555;
-		}
-	</style>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>

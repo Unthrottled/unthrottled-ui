@@ -1,116 +1,70 @@
 <script>
+  import {goto} from "$app/navigation";
 </script>
 
 <svelte:head>
-	<title>Unthrottled</title>
-	<meta name="description" content="Define your own limits." />
+  <title>Unthrottled</title>
+  <meta name="description" content="Define your own limits."/>
 </svelte:head>
 
 <section>
-	<div class="brandContainer">
-		<span style="opacity: 0">and his name is John Cena!</span>
-		<div v-if="brandAnimationStarted">
-			<div class="hero-headline">
-				Define your<br />
-				own limits.
-			</div>
-		</div>
-		<transition appear name="fade" v-on:after-enter="excerptShown">
-			<div class="stuff-u">
-				<div class="bottom-caption">
-					<span>Focus</span> on what is important<br />
-					and <span>demand excellence</span>.
-				</div>
-				<div class="bottom-caption">
-					<span>Deliver</span> amazing <span>value</span>.
-				</div>
-				<p class="preachySpeachy">
-					Why would you settle for anything less?<br /><br />
-					Never let anything prevent you from achieving your goals. What you
-					want to do is possible given time, effort, and reason.
-				</p>
-				<p class="more-details">
-					<router-link class="link" to="/capabilities">
-						<span class="link"> Learn how I can help. </span>
-					</router-link>
-				</p>
-			</div>
-		</transition>
-	</div>
+  <div class="brandContainer">
+    <span style="opacity: 0">and his name is John Cena!</span>
+    <div class="hero-headline">
+      Define your<br/>
+      own limits.
+    </div>
+    <div class="stuff-u">
+      <div class="bottom-caption">
+        <span>Focus</span> on what is important<br/>
+        and <span>demand excellence</span>.
+      </div>
+      <div class="bottom-caption">
+        <span>Deliver</span> amazing <span>value</span>.
+      </div>
+      <p class="preachySpeachy">
+        Why would you settle for anything less?<br/><br/>
+        Never let anything prevent you from achieving your goals. What you
+        want to do is possible given time, effort, and reason.
+      </p>
+      <p class="more-details">
+        <a on:mouseup={() => goto("/capabilities")} class="link"> Learn how I can help. </a>
+      </p>
+    </div>
+  </div>
 </section>
 
 <style>
-	.brandContainer {
-		margin: auto;
-		max-width: 500px;
-	}
+  .brandContainer {
+    margin: auto;
+    max-width: 500px;
+  }
 
-	.stuff-u {
-	}
-	.highlight {
-		color: #fff;
-	}
+  .link {
+    text-decoration: none;
+    color: #e8ad4f;
+    font-size: 1.25rem;
+  }
 
-	.link {
-		text-decoration: none;
-		color: #e8ad4f;
-		font-size: 1.25rem;
-	}
+  .bottom-caption {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
 
-	.bottom-caption {
-		margin-top: 3rem;
-		font-size: 2rem;
-	}
+  .preachySpeachy {
+    margin-top: 3rem;
+    font-size: 22px;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #b2b2b4;
+    margin-bottom: 2rem;
+  }
 
-	.preachySpeachy {
-		margin-top: 3rem;
-		font-size: 22px;
-		line-height: 2rem;
-		font-weight: 400;
-		color: #b2b2b4;
-		margin-bottom: 2rem;
-	}
-
-	.hero-subtext {
-		font-size: 24px;
-		font-weight: 700;
-	}
-	.hero-headline {
-		font-size: 5rem;
-		margin-top: 2rem;
-		font-weight: 700;
-		color: #fff;
-	}
-	@keyframes fadeInUp {
-		from {
-			transform: translate3d(0, 40px, 0);
-		}
-
-		to {
-			transform: translate3d(0, 0, 0);
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes fadeInUp {
-		from {
-			transform: translate3d(0, 40px, 0);
-		}
-		to {
-			transform: translate3d(0, 0, 0);
-			opacity: 1;
-		}
-	}
-
-	.fadeInUp-enter-active {
-		opacity: 0;
-		animation-name: fadeInUp;
-		-webkit-animation-name: fadeInUp;
-		animation-duration: 1s;
-		animation-fill-mode: both;
-		-webkit-animation-duration: 1s;
-		-webkit-animation-fill-mode: both;
-	}
-
+  .hero-headline {
+    font-size: 5rem;
+    margin-top: 2rem;
+    font-weight: 700;
+    color: #fff;
+  }
 
 </style>
