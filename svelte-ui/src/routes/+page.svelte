@@ -9,7 +9,12 @@
 <section>
 	<div class="brandContainer">
 		<span style="opacity: 0">and his name is John Cena!</span>
-<!--		<Banner :on-animate="onBannerDisplay" />-->
+		<div v-if="brandAnimationStarted">
+			<div class="hero-headline">
+				Define your<br />
+				own limits.
+			</div>
+		</div>
 		<transition appear name="fade" v-on:after-enter="excerptShown">
 			<div class="stuff-u">
 				<div class="bottom-caption">
@@ -65,5 +70,47 @@
 		color: #b2b2b4;
 		margin-bottom: 2rem;
 	}
+
+	.hero-subtext {
+		font-size: 24px;
+		font-weight: 700;
+	}
+	.hero-headline {
+		font-size: 5rem;
+		margin-top: 2rem;
+		font-weight: 700;
+		color: #fff;
+	}
+	@keyframes fadeInUp {
+		from {
+			transform: translate3d(0, 40px, 0);
+		}
+
+		to {
+			transform: translate3d(0, 0, 0);
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeInUp {
+		from {
+			transform: translate3d(0, 40px, 0);
+		}
+		to {
+			transform: translate3d(0, 0, 0);
+			opacity: 1;
+		}
+	}
+
+	.fadeInUp-enter-active {
+		opacity: 0;
+		animation-name: fadeInUp;
+		-webkit-animation-name: fadeInUp;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+	}
+
 
 </style>
