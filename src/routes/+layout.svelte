@@ -17,6 +17,8 @@
 <style>
   main {
     max-width: 550px;
+    height: 100%;
     margin: auto;
+    overflow: scroll;
   }
 </style>

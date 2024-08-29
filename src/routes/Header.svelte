@@ -5,9 +5,6 @@
 </script>
 
 <header>
-  <div class="johnCena nav">
-    <a href="" on:mouseup={() => goto("/")} class="brand">Unthrottled</a>
-  </div>
   <div class="navContainer">
     <div id="nav">
       <div class="navTransition">
@@ -89,15 +86,6 @@
 </header>
 
 <style>
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.5s;
-  }
-
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
-  }
-
   .navigationLinkText {
     margin: auto;
   }
@@ -155,14 +143,10 @@
     justify-content: space-evenly;
   }
 
-  .johnCena {
-    opacity: 0;
-  }
 
   .navContainer {
     top: 0;
     z-index: 9001;
-    position: fixed;
     width: 100%;
     background: #262b30;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
