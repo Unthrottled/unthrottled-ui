@@ -7,8 +7,8 @@ body {
 }
 
 html {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;*/
+  /*height: 100%;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #2b3238;
@@ -41,4 +41,3 @@ html {
 *::-webkit-scrollbar-thumb {
   background-color: #a7303555;
 }
-
