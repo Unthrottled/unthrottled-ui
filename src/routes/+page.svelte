@@ -10,10 +10,10 @@
 <section>
   <div class="brandContainer">
     <span style="opacity: 0">and his name is John Cena!</span>
-    <div class="hero-headline">
+    <h1 class="hero-headline">
       Define your<br/>
       own limits.
-    </div>
+    </h1>
     <div class="stuff-u">
       <div class="bottom-caption">
         <span>Focus</span> on what is important<br/>
@@ -36,8 +36,6 @@
 
 <style>
   .brandContainer {
-    margin: auto;
-    max-width: 500px;
   }
 
   .link {
@@ -62,7 +60,6 @@
 
   .hero-headline {
     font-size: 5rem;
-    margin-top: 2rem;
     font-weight: 700;
     color: #fff;
   }

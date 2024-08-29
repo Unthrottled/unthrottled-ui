@@ -762,8 +762,6 @@
   }
 
   .products {
-    margin: auto;
-    max-width: 550px;
   }
 
   .highlight {
@@ -806,15 +804,6 @@
 
   .caption {
     color: #a5a5a7;
-  }
-
-  .sogosExcerpt {
-    margin: auto 0 auto 2rem;
-  }
-
-  .sogosHeadline {
-    font-size: 3.5rem;
-    color: #fff;
   }
 
   .productExcerpt {

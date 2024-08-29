@@ -1,5 +1,6 @@
 <script>
   import {goto} from '$app/navigation';
+  import { page } from '$app/stores';
 
 </script>
 
@@ -10,11 +11,11 @@
   <div class="navContainer">
     <div id="nav">
       <div class="navTransition">
-        <a href="" on:mouseup={() => goto("/")} class="brand">Unthrottled</a>
+        <a href="" on:mouseup={() => goto("/")} class="brand" >Unthrottled</a>
         <span style="flex-grow: 0.5"/>
         <div class="navLinks">
           <div class="navigationTab">
-            <a href="" on:mouseup={() => goto("/products")} class="navigationLink">
+            <a href="" on:mouseup={() => goto("/products")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/products"}>
               <span class="navigationLinkText">Products</span>
               <div class="routerIcon">
                 <svg
@@ -33,7 +34,7 @@
             </a>
           </div>
           <div class="navigationTab">
-            <a href="" on:mouseup={() => goto("/capabilities")} class="navigationLink">
+            <a href="" on:mouseup={() => goto("/capabilities")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/capabilities"}>
               <span class="navigationLinkText">Capabilities</span>
               <div class="routerIcon">
                 <svg
@@ -52,7 +53,7 @@
             </a>
           </div>
           <div class="navigationTab">
-            <a href="" on:mouseup={() => goto("/values")} class="navigationLink">
+            <a href="" on:mouseup={() => goto("/values")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/values"}>
               <span class="navigationLinkText">Values</span>
               <div class="routerIcon">
                 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -63,7 +64,7 @@
             </a>
           </div>
           <div class="navigationTab">
-            <a href="" on:mouseup={() => goto("/contact")} class="navigationLink">
+            <a href="" on:mouseup={() => goto("/contact")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/contact"}>
               <span class="navigationLinkText">Contact</span>
               <div class="routerIcon">
                 <svg
@@ -88,76 +89,12 @@
 </header>
 
 <style>
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  svg {
-    width: 2em;
-    height: 3em;
-    display: block;
-  }
-
-  path {
-    fill: var(--background);
-  }
-
-  ul {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    background: var(--background);
-    background-size: contain;
-  }
-
-  li {
-    position: relative;
-    height: 100%;
-  }
-
-  li[aria-current='page']::before {
-    --size: 6px;
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: calc(50% - var(--size));
-    border: var(--size) solid transparent;
-    border-top: var(--size) solid var(--color-theme-1);
-  }
-
-  nav a {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding: 0 0.5rem;
-    color: var(--color-text);
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-decoration: none;
-    transition: color 0.2s linear;
-  }
-
-  a:hover {
-    color: var(--color-theme-1);
-  }
-
   .fade-enter-active,
   .fade-leave-active {
     transition: opacity 0.5s;
   }
 
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-  {
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
   }
 
@@ -185,7 +122,7 @@
 
   #nav,
   .nav {
-    /*padding: 0.6rem 1rem;*/
+    padding: 0.6rem 1rem;
   }
 
   .nav, a {
@@ -194,19 +131,17 @@
     font-weight: 200;
   }
 
-  .nav, a, svg {
+  .nav, svg {
     fill: #f5f5f7;
     vertical-align: middle;
   }
 
-  .router-link-exact-active {
+  .nav, .router-link-exact-active {
     color: #a73035;
   }
-
-  .router-link-exact-active svg {
+  .nav, .router-link-exact-active svg {
     fill: #a73035;
   }
-
 
   .navTransition {
     display: flex;
@@ -232,4 +167,5 @@
     background: #262b30;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
   }
+
 </style>
