@@ -75,7 +75,6 @@
   hr {
     margin: 2rem 0;
   }
-
   .service-hero-headline {
     font-size: 3rem;
     margin-top: 2rem;
