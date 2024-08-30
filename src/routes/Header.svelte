@@ -6,9 +6,8 @@
 
 <header>
   <div class="navContainer">
-    <div id="nav">
-      <div class="navTransition">
-        <a href="" on:mouseup={() => goto("/")} class="brand" >Unthrottled</a>
+    <div class="nav">
+        <a href="" on:mouseup={() => goto("/")} class:router-link-exact-active={$page.url.pathname.length < 2} class="brand" >Unthrottled</a>
         <span style="flex-grow: 0.5"/>
         <div class="navLinks">
           <div class="navigationTab">
@@ -81,7 +80,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </header>
 
@@ -108,33 +106,29 @@
     font-weight: 500 !important;
   }
 
-  #nav,
   .nav {
-    padding: 0.6rem 1rem;
+    display: flex;
+    margin: auto;
+    max-width: 980px;
   }
 
-  .nav, a {
+  .nav a {
     color: #f5f5f7;
     text-decoration: none;
     font-weight: 200;
+    padding: 0.6rem 1rem;
   }
 
-  .nav, svg {
+  .nav svg {
     fill: #f5f5f7;
     vertical-align: middle;
   }
 
-  .nav, .router-link-exact-active {
+  .nav .router-link-exact-active {
     color: #a73035;
   }
-  .nav, .router-link-exact-active svg {
+  .nav .router-link-exact-active svg {
     fill: #a73035;
-  }
-
-  .navTransition {
-    display: flex;
-    margin: auto;
-    max-width: 980px;
   }
 
   .navLinks {
