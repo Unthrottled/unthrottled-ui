@@ -37,7 +37,7 @@
         <img
                 alt="Doki Theme for JetBrains IDEs preview"
                 class="productImage"
-                src="https://github.com/doki-theme/doki-theme-jetbrains/raw/master/assets/screenshots/franxx/zero_two_dark_code.png"
+                src="/doki_theme_example.png"
         />
         <p class="productTagline">
           Over <span class="highlight">65 themes</span> available for your
@@ -548,7 +548,7 @@
         <img
                 alt="Anime Meme plugin preview"
                 class="productImage"
-                src="https://raw.githubusercontent.com/ani-memes/AMII/main/readmeAssets/exit_code.gif"
+                src="/anime_memes_example.gif"
         />
       </div>
     </div>
