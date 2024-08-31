@@ -428,17 +428,6 @@
                       xlink:href="#linearGradient1099"
               />
             </defs>
-            <metadata>
-              <rdf:RDF>
-                <cc:Work rdf:about="">
-                  <dc:format>image/svg+xml</dc:format>
-                  <dc:type
-                          rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                  />
-                  <dc:title/>
-                </cc:Work>
-              </rdf:RDF>
-            </metadata>
             <g>
               <path
                       d="m9.2213 27.402c2.7692-16.385 9.6109-19.072 16.177-22.684-7.7117-13.663-35.358 13.675-16.177 22.684z"
@@ -674,17 +663,6 @@
                   xmlns:dc="http://purl.org/dc/elements/1.1/"
                   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
           >
-            <metadata>
-              <rdf:RDF>
-                <cc:Work rdf:about="">
-                  <dc:format>image/svg+xml</dc:format>
-                  <dc:type
-                          rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-                  />
-                  <dc:title/>
-                </cc:Work>
-              </rdf:RDF>
-            </metadata>
             <path
                     d="m49.736 30.143a22.105 22.105 0 0 1-22.031 22.105 22.105 22.105 0 0 1-22.179-21.956 22.105 22.105 0 0 1 21.881-22.252 22.105 22.105 0 0 1 22.326 21.807"
                     fill="#eeeeee"

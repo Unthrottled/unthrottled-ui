@@ -7,13 +7,13 @@
 <header>
   <div class="navContainer">
     <div class="nav">
-        <a href="" on:click={() => goto("/")} class:router-link-exact-active={$page.url.pathname.length < 2} class="brand" >
+        <a href="/" class:router-link-exact-active={$page.url.pathname.length < 2} class="brand" >
           <span class="navigationLinkText">Unthrottled</span>
         </a>
         <span style="flex-grow: 0.5"/>
         <div class="navLinks">
           <div class="navigationTab">
-            <a href="" on:click={() => goto("/products")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/products"}>
+            <a href="/products" class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/products"}>
               <span class="navigationLinkText">Products</span>
               <div class="routerIcon">
                 <svg
@@ -32,7 +32,7 @@
             </a>
           </div>
           <div class="navigationTab">
-            <a href="" on:click={() => goto("/capabilities")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/capabilities"}>
+            <a href="/capabilities" class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/capabilities"}>
               <span class="navigationLinkText">Capabilities</span>
               <div class="routerIcon">
                 <svg
@@ -51,7 +51,7 @@
             </a>
           </div>
           <div class="navigationTab">
-            <a href="" on:click={() => goto("/values")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/values"}>
+            <a href="/values" class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/values"}>
               <span class="navigationLinkText">Values</span>
               <div class="routerIcon">
                 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@
             </a>
           </div>
           <div class="navigationTab">
-            <a href="" on:click={() => goto("/contact")} class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/contact"}>
+            <a href="/contact" class="navigationLink" class:router-link-exact-active={$page.url.pathname === "/contact"}>
               <span class="navigationLinkText">Contact</span>
               <div class="routerIcon">
                 <svg
