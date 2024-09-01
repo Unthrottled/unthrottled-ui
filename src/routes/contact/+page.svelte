@@ -10,7 +10,7 @@
   <h1 class="more-hero-headline">Contact Me</h1>
   <div class="more-details">
     <div class="principal">
-      <h3>Email</h3>
+      <h3>Alex Keith Simons</h3>
       <p>
         <a class="dashboardLink" href="mailto:alex@unthrottled.io"
         >alex@unthrottled.io</a>
