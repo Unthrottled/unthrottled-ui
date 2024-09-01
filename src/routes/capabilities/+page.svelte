@@ -7,26 +7,22 @@
 </svelte:head>
 
 <div class="services">
-  <h1 class="service-hero-headline">What can I do?</h1>
+  <h1 class="service-hero-headline">A Backend Developer</h1>
   <div>
-    <p class="subtitle">Here are the things I am really good at:</p>
-    <h2>Backend Tech</h2>
+    <h2>Tech</h2>
     <p>
-      Kotlin, Java, SpringBoot, Reactive Programming, PostgreSQL, JWT,
+      Typescript, Node, Kotlin, Java, SpringBoot, Functional Programming, PostgreSQL,
       OpenIDConnect
     </p>
-    <h4>DevOps</h4>
+    <h2>DevOps</h2>
     <p>
       Kubernetes, Docker, Amazon Web Services, Linux Server Administration,
       GitLab CI/CD
     </p>
-    <h4>Observability</h4>
+    <h2>Observability</h2>
     <p>
       Prometheus/Grafana Dashboards, JVM Profiling, Wireshark
     </p>
-    <hr/>
-    <h2>Frontend Tech</h2>
-    <p>Typescript, Javascript, React</p>
   </div>
   <p class="more-details">
     <a href="/contact" class="servicesLink">
@@ -38,7 +34,7 @@
 
 <style>
   .more-details {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .services {
@@ -50,15 +46,6 @@
     font-size: 1.5rem;
     text-decoration: none;
     color: #e8ad4f;
-  }
-
-  .service-description {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  .subtitle {
-    margin-bottom: 2rem;
   }
 
   h2 {
@@ -74,6 +61,7 @@
   hr {
     margin: 2rem 0;
   }
+
   .service-hero-headline {
     font-size: 3rem;
     margin-top: 2rem;

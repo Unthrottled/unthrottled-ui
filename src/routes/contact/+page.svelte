@@ -34,21 +34,11 @@
   }
 
   h3 {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 
   .principal {
     margin-bottom: 2.5rem;
-  }
-
-  .social-links {
-    margin: 2rem 0;
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .social-button {
-    max-height: 100px;
   }
 
   .dashboardLink {
