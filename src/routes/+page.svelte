@@ -8,7 +8,6 @@
 
 <section>
   <div class="brandContainer">
-    <span style="opacity: 0">and his name is John Cena!</span>
     <h1 class="hero-headline">
       Define your<br/>
       own limits.

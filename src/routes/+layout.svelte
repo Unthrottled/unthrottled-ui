@@ -20,5 +20,6 @@
     height: 100vh;
     margin: auto;
     overflow: scroll;
+    padding: 0 1rem;
   }
 </style>

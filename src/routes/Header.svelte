@@ -1,13 +1,20 @@
-<script>
+<script lang="ts">
   import {page} from '$app/stores';
 
   let checked = false;
-  const handleClick = () => {
+  const handleClick = (e: Event) => {
     checked = !checked
+    e.stopPropagation();
   };
+
+  const handleBlur = () => {
+    if (!!checked) {
+      checked = false;
+    }
+  }
 </script>
 
-<header>
+<header on:click={handleBlur} aria-label="navigation">
   <div class="navContainer">
     <div class="nav">
       <a href="/" class:router-link-exact-active={$page.url.pathname.length < 2} class="brand">
