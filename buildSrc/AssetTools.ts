@@ -1,8 +1,15 @@
-const fs = require('fs');
-const path = require('path');
-const crypto = require('crypto');
-const aws = require('aws-sdk');
+import fs from 'fs';
 
+import path from 'path';
+
+import crypto from 'crypto';
+
+import aws from 'aws-sdk';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 export const rootDirectory = path.join(__dirname, '..');
 
 export const assetDirectory = path.resolve(__dirname, '..', 'build');

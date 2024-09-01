@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import FileType from 'file-type';
+import { fileTypeFromFile } from 'file-type';
 import {
 	assetDirectories,
 	assetDirectory,
@@ -12,6 +12,12 @@ import {
 	StringDictionary,
 	walkDir
 } from './AssetTools';
+import type { FileTypeResult } from 'file-type/core';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const syncedAssets: StringDictionary<string> = getSyncedAssets();
 
@@ -25,8 +31,8 @@ const uploadUnsyncedAssets = (workToBeDone: [string, string][]): Promise<[string
 	const next = workToBeDone.pop();
 	if (next) {
 		const [filePath] = next;
-		return FileType.fromFile(filePath)
-			.then((fileType: any) => {
+		return fileTypeFromFile(filePath)
+			.then((fileType: FileTypeResult) => {
 				if (!fileType && filePath.endsWith('.xml')) {
 					return { mime: 'application/xml' };
 				}
@@ -64,7 +70,7 @@ const uploadUnsyncedAssets = (workToBeDone: [string, string][]): Promise<[string
 			.then((fileType: any) => {
 				return new Promise<boolean>((res) => {
 					const fileStream = fs.createReadStream(filePath);
-					fileStream.on('error', (err: any) => {
+					fileStream.on('error', (err: unknown) => {
 						console.warn(`Unable to open stream for ${next} for raisins ${err}`);
 						res(false);
 					});
@@ -78,7 +84,7 @@ const uploadUnsyncedAssets = (workToBeDone: [string, string][]): Promise<[string
 							ACL: 'public-read',
 							ContentType: fileType?.mime
 						},
-						(err: any) => {
+						(err: unknown) => {
 							if (err) {
 								console.warn(`Unable to upload ${next} to s3 for raisins ${err}`);
 								res(false);
