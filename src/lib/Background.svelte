@@ -44,10 +44,6 @@
 </div>
 
 <style>
-  .brand {
-    width: 90%;
-  }
-
   #main {
     position: fixed !important;
     width: 100%;
