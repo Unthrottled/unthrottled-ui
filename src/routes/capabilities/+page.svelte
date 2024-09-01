@@ -52,16 +52,6 @@
     font-weight: 300;
   }
 
-  h4 {
-    font-weight: 300;
-    font-size: 1.25rem;
-    text-decoration: underline;
-  }
-
-  hr {
-    margin: 2rem 0;
-  }
-
   .service-hero-headline {
     font-size: 3rem;
     margin-top: 2rem;
