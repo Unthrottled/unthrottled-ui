@@ -7,34 +7,18 @@
 </svelte:head>
 
 <div class="more">
-  <h1 class="more-hero-headline">Where To Find Me</h1>
+  <h1 class="more-hero-headline">Contact Me</h1>
   <div class="more-details">
     <div class="principal">
       <h3>Email</h3>
       <p>
         <a class="dashboardLink" href="mailto:alex@unthrottled.io"
-        >alex@unthrottled.io</a
-        >
+        >alex@unthrottled.io</a>
       </p>
-    </div>
-    <div class="principal">
-      <h3>Social Sites</h3>
-      <p>
-        <a
-                class="dashboardLink"
-                href="https://www.linkedin.com/in/alex-simons-1a459610a/"
-        >LinkedIn</a
-        >
-      </p>
-      <p>
-        <a class="dashboardLink" href="https://github.com/Unthrottled"
-        >GitHub</a>
-      </p>
+      <img src="/avatar_256.png" alt="Me" class="avatar" />
     </div>
   </div>
 </div>
-
-
 
 
 <style>
@@ -43,6 +27,10 @@
     margin-top: 2rem;
     font-weight: 300;
     color: #fff;
+  }
+
+  .avatar {
+    margin-top: 2rem;
   }
 
   h3 {
