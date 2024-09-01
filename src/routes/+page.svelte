@@ -1,5 +1,4 @@
 <script>
-  import {goto} from "$app/navigation";
 </script>
 
 <svelte:head>
@@ -28,7 +27,7 @@
         want to do is possible given time, effort, and reason.
       </p>
       <p class="more-details">
-        <a on:mouseup={() => goto("/capabilities")} class="link"> Learn how I can help. </a>
+        <a href="/capabilities" class="link"> Learn how I can help. </a>
       </p>
     </div>
   </div>

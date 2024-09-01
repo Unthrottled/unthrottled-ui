@@ -1,5 +1,4 @@
 <script>
-  import {goto} from "$app/navigation";
 </script>
 
 <svelte:head>
@@ -30,7 +29,7 @@
     <p>Typescript, Javascript, React</p>
   </div>
   <p class="more-details">
-    <a on:mouseup={() => goto("/contact")} class="servicesLink">
+    <a href="/contact" class="servicesLink">
       <span class="link">Let's get in contact. </span>
     </a>
   </p>
